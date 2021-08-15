@@ -111,7 +111,7 @@ public class HashMapsInitWays {
 		//map8.put("900", "check");
 
 		// Using guava library  FROM GOOGLE
-	// Map<String,String> map9  = ImmutableMap.of("1","TEST");
+		// Map<String,String> map9  = ImmutableMap.of("1","TEST");
 
 
 
