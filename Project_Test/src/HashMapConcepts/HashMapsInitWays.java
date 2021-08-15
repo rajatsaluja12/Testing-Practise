@@ -97,7 +97,7 @@ public class HashMapsInitWays {
 		System.out.println(map7.get("TEST"));
 
 		// Map.ofEnteries method - no limitations on the pair (key-value)
-		//Map.ofEntries() - We can only create a immuytable maps , once created we cannot cahnge
+		//Map.ofEntries() - We can only create a immutable maps , once created we cannot cahnge
 
 		Map<String,String> map8 = Map.ofEntries(
 
