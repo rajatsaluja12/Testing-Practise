@@ -1,0 +1,528 @@
+
+SOAP Is Verb and Action 
+Rest is Noun/resources - We use HTTP Protocol - GET, POST, DELETE, PUT
+
+
+100 Continue
+This interim response indicates that everything so far is OK and that the client should continue the request, or ignore the response if the request is already finished.
+101 Switching Protocol
+This code is sent in response to an Upgrade request header from the client, and indicates the protocol the server is switching to.
+102 Processing (WebDAV)
+This code indicates that the server has received and is processing the request, but no response is available yet.
+103 Early Hints
+This status code is primarily intended to be used with the Link header, letting the user agent start preloading resources while the server prepares a response.
+
+
+Successful responses
+200 OK
+The request has succeeded. The meaning of the success depends on the HTTP method:
+GET: The resource has been fetched and is transmitted in the message body.
+HEAD: The representation headers are included in the response without any message body.
+PUT or POST: The resource describing the result of the action is transmitted in the message body.
+TRACE: The message body contains the request message as received by the server.
+201 Created
+The request has succeeded and a new resource has been created as a result. This is typically the response sent after POST requests, or some PUT requests.
+202 Accepted
+The request has been received but not yet acted upon. It is non committal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request. 
+It is intended for cases where another process or server handles the request, or for batch processing.
+203 Non-Authoritative Information
+This response code means the returned meta-information is not exactly the same as is available from the origin server, but is collected from a local or a third-party copy. 
+This is mostly used for mirrors or backups of another resource. Except for that specific case, the "200 OK" response is preferred to this status.
+204 No Content
+There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones.
+205 Reset Content
+Tells the user-agent to reset the document which sent this request.
+206 Partial Content
+This response code is used when the Range header is sent from the client to request only part of a resource.
+207 Multi-Status (WebDAV)
+Conveys information about multiple resources, for situations where multiple status codes might be appropriate.
+208 Already Reported (WebDAV)
+Used inside a <dav:propstat> response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.
+226 IM Used (HTTP Delta encoding)
+The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
+
+Redirection messages
+300 Multiple Choice
+The request has more than one possible response. The user-agent or user should choose one of them. 
+(There is no standardized way of choosing one of the responses,but HTML links to the possibilities are recommended so the user can pick.)
+301 Moved Permanently
+The URL of the requested resource has been changed permanently. The new URL is given in the response.
+302 Found
+This response code means that the URI of requested resource has been changed temporarily. Further changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.
+303 See Other
+The server sent this response to direct the client to get the requested resource at another URI with a GET request.
+304 Not Modified
+This is used for caching purposes. It tells the client that the response has not been modified, so the client can continue to use the same cached version of the response.
+305 Use Proxy 
+Defined in a previous version of the HTTP specification to indicate that a requested response must be accessed by a proxy. It has been deprecated due to security concerns regarding in-band configuration of a proxy.
+306 unused
+This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification.
+307 Temporary Redirect
+The server sends this response to direct the client to get the requested resource at another URI with same method that was used in the prior request. This has the same semantics as the 302 Found HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request.
+308 Permanent Redirect
+This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request.
+
+Client error responses
+400 Bad Request
+The server could not understand the request due to invalid syntax.
+401 Unauthorized
+Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response.
+402 Payment Required 
+This response code is reserved for future use. The initial aim for creating this code was using it for digital payment systems, however this status code is used very rarely and no standard convention exists.
+403 Forbidden
+The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. 
+Unlike 401, the client's identity is known to the server.
+404 Not Found
+The server can not find the requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurrence on the web.
+405 Method Not Allowed
+The request method is known by the server but has been disabled and cannot be used. For example, an API may forbid DELETE-ing a resource. The two mandatory methods, GET and HEAD, must never be disabled and should not return this error code.
+406 Not Acceptable
+This response is sent when the web server, after performing server-driven content negotiation, doesn't find any content that conforms to the criteria given by the user agent.
+407 Proxy Authentication Required
+This is similar to 401 but authentication is needed to be done by a proxy.
+408 Request Timeout
+This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing. Also note that some servers merely shut down the connection without sending this message.
+409 Conflict
+This response is sent when a request conflicts with the current state of the server.
+410 Gone
+This response is sent when the requested content has been permanently deleted from server, with no forwarding address. Clients are expected to remove their caches and links to the resource. The HTTP specification intends this status code to be used for "limited-time, promotional services". APIs should not feel compelled to indicate resources that have been deleted with this status code.
+411 Length Required
+Server rejected the request because the Content-Length header field is not defined and the server requires it.
+412 Precondition Failed
+The client has indicated preconditions in its headers which the server does not meet.
+413 Payload Too Large
+Request entity is larger than limits defined by server; the server might close the connection or return an Retry-After header field.
+414 URI Too Long
+The URI requested by the client is longer than the server is willing to interpret.
+415 Unsupported Media Type
+The media format of the requested data is not supported by the server, so the server is rejecting the request.
+416 Range Not Satisfiable
+The range specified by the Range header field in the request can't be fulfilled; it's possible that the range is outside the size of the target URI's data.
+417 Expectation Failed
+This response code means the expectation indicated by the Expect request header field can't be met by the server.
+418 I'm a teapot
+The server refuses the attempt to brew coffee with a teapot.
+421 Misdirected Request
+The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.
+422 Unprocessable Entity (WebDAV)
+The request was well-formed but was unable to be followed due to semantic errors.
+423 Locked (WebDAV)
+The resource that is being accessed is locked.
+424 Failed Dependency (WebDAV)
+The request failed due to failure of a previous request.
+425 Too Early 
+Indicates that the server is unwilling to risk processing a request that might be replayed.
+426 Upgrade Required
+The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol. The server sends an Upgrade header in a 426 response to indicate the required protocol(s).
+428 Precondition Required
+The origin server requires the request to be conditional. This response is intended to prevent the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict.
+429 Too Many Requests
+The user has sent too many requests in a given amount of time ("rate limiting").
+431 Request Header Fields Too Large
+The server is unwilling to process the request because its header fields are too large. The request may be resubmitted after reducing the size of the request header fields.
+451 Unavailable For Legal Reasons
+The user-agent requested a resource that cannot legally be provided, such as a web page censored by a government.
+
+
+
+Server error responses
+500 Internal Server Error
+The server has encountered a situation it doesn't know how to handle.
+501 Not Implemented
+The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are GET and HEAD.
+502 Bad Gateway
+This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.
+503 Service Unavailable
+The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This response should be used for temporary conditions and the Retry-After: HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached.
+504 Gateway Timeout
+This error response is given when the server is acting as a gateway and cannot get a response in time.
+505 HTTP Version Not Supported
+The HTTP version used in the request is not supported by the server.
+506 Variant Also Negotiates
+The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.
+507 Insufficient Storage (WebDAV)
+The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request.
+508 Loop Detected (WebDAV)
+The server detected an infinite loop while processing the request.
+510 Not Extended
+Further extensions to the request are required for the server to fulfill it.
+511 Network Authentication Required
+The 511 status code indicates that the client needs to authenticate to gain network access.
+
+
+
+Need of Rest 
+Seperate Client & Server 
+Rest is Independent of platform & language
+Flexibility & Scalibility 
+NOt constraint to one format . Can return (XML, JSON etc)
+Since built on top of HTTP, can take advantage of http cache - which minimize network usage and optimize network coverage
+Easy to use 
+Dicoverability 
+
+
+What is WEB ?
+* Interconnected Network 
+
+What is an API ?
+Application Programming Interface 
+
+What is a Web Server ? Why we need it ?
+  --> Ex. IIS
+  --> To handle request & Responses
+  
+  Why we need Web API?
+  --> Distributed nature of the system 
+  
+  What is SOAP ?
+  --> Simple Object Access Protocol
+  --> Can be built using WCF
+  --> Return XML
+  -->Web Services are nothing but SOAP Services
+  
+  
+  Rest is an architectural style 
+  Restful is referred to web Services that implement REST
+  It is simply a program that returns data from the database to the client in a format that it requests
+  It is based on HTTP, it retrieves data through standard HTTP methods. GET, Put, Post, Delete
+  
+  
+ Rest Constraints
+  
+--> Client - Server
+--> Stateless
+--> Cache
+--> Uniform Interface 
+--> Layered System 
+--> Code on Demand 
+
+Client - Server 
+
+* This constraints states that a Rest application should have a client server architeture 
+* Advantage is Client & Server are seperated 
+* They can evolve independently 
+* Client need not know anything about business logic/ data access layer 
+* Servers need not know anything about the frontend UI
+
+
+Stateless Constraints 
+
+* Stateless constraints states that the server does not store any session data 
+* The communication between the client & server is stateless 
+* It means that the information to understand a request is contained within the request 
+* Improves Scalability 
+Request more network bandwidth and reduces network optimization 
+
+Cache
+* Cache Constraints states response should be cacheable, if possible 
+* It requires that every response should include whether a response can be cacheable or not 
+* For subsequent requests, the client can retrieve from its cache, need to send request to the server 
+* Reduces network latency 
+
+Uniform Interface 
+* Uniform Interface is the key differentiator between REST & Non-Rest API's 
+* There are 4 elements of Uniform Interface Constraints
+ --> Identification of Resources (typically by an URL )
+ --> Manipulation of Resources through representations
+ --> Self - descriptive messages for each request 
+ -->HATEOS (Hypermedia As the Engine of application state)
+*Promotes generality as all components interact in the same way 
+
+
+Layered System 
+* Allows an architecture to be composed of hierachical layers 
+* Each layers doesn't know anything beyond the immediate layer
+* Limits the amount of complexity that can be introduced at any single layer 
+* Disadvantage is latency 
+Example  MVC - Modular view Controller 
+
+Code on Demand 
+* Optional Constraint 
+* In addition to data, the server can provide executable code to the client 
+* The constraints reduces visibility 
+
+----------------------------------------------------------------------------------------------
+Introduction to Caching 
+--> Caching can dramatically improve performance 
+--> Eliminating requests reduces the number of request from the client 
+* User Expiration Mechanism for this purpose 
+--> Elimnating the need to send full response reduces network bandwidth requirements
+* Uses validation Mechanism for this purpose 
+
+--> So we have 2 models . Expiration & validation model
+* Cache sits between the client application & the API , It is the middle men in our architeture 
+
+3 types of Cache 
+--> Private or Client Cache 
+--> Gateway Cache or Server Cache 
+--> Proxy Cache 
+
+------------------------------------------------------------
+Expiration Model 
+--> Cache Information can be specified in 
+* Expires Header : Expires Mon, 23 July 2017
+(or)
+* Cache-Control Header : cache - control; public , max-age=2500
+--> When the client request data for the first time, the data age is cached either by private/shared cache 
+--> Subsequent request use the max age directive to decide if it should hit the API or cache 
+
+---> Private Cache vs Shared Cache 
+
+----------------------------------------------------------------------------------------------
+
+Validation Model 
+* To validate the freshness of a response that is cached
+* Cache needs to check with the server , if the response has expired 
+* So, it validates against a validator 
+* 2 types of validators
+--> Strong validators - byte to byte comparison of the representation 
+--> Weak validators - looks for semantic equivalence 
+
+--> For each request, Server will send a resource and an Etag for that resource. This response can be cached. Example Etag:"3424"
+--> if the data is expired, the cache can send the Etag of the resource to the API with if-None-match field, checking if the resources is updated example If-None-Match : "3424"
+--> if the resource is not updated, the server sends a 304(not modified) message to the cache . The cache sends 200 Ok response to the client. 
+--> if the resources is updated , new data will be returned 
+-----------------------------------------------------------------------------------------------
+Cache Control Directives 
+--> When the server sends a response , it can add several cache -control directives 
+--> They are 
+	* For Freshness : max-age , s- max age
+	* Other : no store , no cache 
+	* Cache type : Public , private 
+--> These directives can also be overridden by the client while requesting the resource 	
+
+----------------------------------------------------------------------------------------------
+Concurrency in REST 
+
+--> Concurrency strategy in REST (using ETag )
+--> Issue 
+	* If User1 & User2 gets a resource at the same time 
+	* Now User1 updates it 
+	* In a few seconds , if User2 also updates the resource , the changes of User1 are lost 
+	* To deal with this issue , we can use token(Etag)
+412 response code to User2 if he tries to update the record on the server as the Etag has been changed 
+----------------------------------------------------------------------------------------------
+
+Concept of Serialization
+
+What is Serialization 
+--> Converting Object to String 
+--> String - a series of characters sent one at a time 
+--> can serialize any object to string in any encoding format. Popular one are Xml & Json
+
+
+Concept of Deserialization 
+
+
+What is Deserialization ?
+--> Converting JSON String to Objects
+--> Can Deserialize from any encoding format. Popular one are Xml & Json 
+
+
+Richardson Maturity Model 
+
+--> Richardson Maturity Model is a model developed by Leonard Richardson 
+--> It grades APIs by their Restful maturity 
+--> There are 4 levels . Only when APIs reach the level 4, we can talk about a Restful API. The level are :
+ * Level 0 
+ * Level 1 
+ * Level 2 
+ * Level 3 
+ ---------
+ * Level 4 -- when it reaches to level 4, we can say that it is truly Restful API 
+ 
+ level 0 --Plain Old Xml
+ --> Http is used only as a transport protocol. HTTP is used for remote interaction
+ --> To get the data and to post the data we send request to the same URL, Only POST request may be used 
+ -- To get the data , POST http://localhost:400/customer
+ --to post the data, POST http://localhost:400/customer 
+ 
+ Level 1 
+ --> In Level 0, there was only 1 URI 
+ --> In level 1, each resource is mapped to a specifies URI 
+ example the URI to get products http://localhost:2300/products
+ to get URI for a specified product http://localhost:2300/products/1
+ --> Still, only one HTTP method (POST) is still used for retrieving & creating data
+ 
+ level 2 
+ --> At level 2, correct HTTP verbs are used with each request 
+ --> For each of those requests, correct HTTP response code is provided 
+ --> Example , GET http://localhost:2300/customers 
+ --> 200 OK
+ 
+ level 3 
+ --> AT level 3, the APis support HATEOS 
+Example GET http://localhost:2300/customers
+for this, the response that we get is Customer JSON + Self Documenting Hypermedia(Links which basically tells what are the different orders that my customer might have placed and link to that particular order aswell)
+--> Helps in self documentation  
+-----------------------------------------------------------------------
+
+Understanding HTTP Request 
+* Http request is a message from the client to the server 
+* If the user clicks on the below hyperlink 
+<a href= "http://localhost:2400/categories/02/books">
+show all the books in the 2nd category 
+</a>
+* The HTTP request message will be sent as :
+ GET/categories/02/books HTTP/1.1
+ Host:localhost:2400
+ User-Agent:Mozilla/4.0(Compatible, Windows NT)
+ 
+ * URL -/categories/02/books
+ Request Method - GET
+ Http Specification-  1.1
+ Domain : localhost, Port:2400
+ 
+ 
+ ------------------------------------------------------------------------
+ 
+ HTTP Request Methods 
+ 
+ GET - to Get Data from a resource 
+ PUT - to Update Data at a resource
+ POST - to Create data at a resource 
+ Delete - to delete data at a resource 
+ Patch - to partially update data at a resource 
+ 
+ example : apps/products/1
+-------------------------------------------------
+
+Analyzing HTTP Response 
+
+* HTTP Response is a message from the server to the client 
+* For every request , there will be a response 
+* An typical HTTP Response 
+	HTTP/1.1 200 OK
+	Date : Tue,23 OCT 2021 02:12:54 GMT
+	Content-Type : application/json;charset=utf-16
+	Content-length:31
+	{"id":1,"name":"TutorialPoint"}
+*200 OK, is the HTTP status code 
+* Content- Type indicates the type of content within the message body. Content type can be application/json, application/Xml etc.
+* Content-length indicates the total no. of character in the message body 
+* And the last line, (JSON) is the message that is received from the server to the client 
+* we can see the request & response in fiddler tool or developer tool in your browser 
+
+-----------------------------------------------------------------------
+
+Designing REST URLs
+--> Represent Hireachichal relationship by '/'
+example 
+http://localhost:2300/ProductCategory/Subcategory/products
+Within a product category , there are many subcategories, and within a subcategory, there are many products 
+
+--> Use plural nouns when required 
+Example http://localhost:2300/organisation/Departments/1
+To indicate that there are many department within an organisation 
+
+--> Design to improve readablity 
+Example : Use http://localhost:2300/product/user-ratings/
+rather than http://localhost:2300/Product/userRatings
+
+--> Do not use file extension like .html, .asp etc
+
+--> For filtering , use query parameters
+Example http://localhost:2300/Organisation/Departments?name=HR
+Here ? Name=HR indicates Query Parameter 
+
+--> Not a good practice to use URLs with CRUD operations 
+Example 
+Instead of this URL 
+http://localhost:2300/Organisation/GET-Departments/1, use 
+http://localhost:2300/Organisation/Departments/1, with a GET request
+
+--------------------------------------------------------------------------
+Contriollers & Actions 
+* Controllers are nothing but classes that inherit from API Controller class 
+* When a user hits an URL, the URL will be mapped to the appropiate Controller according to the Routing defined 
+* Controller have methods called Actions 
+* so every request to a URL will invoke the method in the appropiate Controller . This method will get executed and will return an HTTP Response 
+
+example api/products/1
+Class -Prducts{
+M1() - These are methods 
+M2()
+}
+	
+Creating Routing templates 
+--> A route template looks similar to an URI with placeholders
+--> When a route template is created,you can specify defaults
+Example : api/controller/{ProductCategory}/{id}
+defaults : new {ProductCategory="Books"}
+For this template, an URI like api/products/2 will always fetch data from Books Category
+
+--> A route template can also provide constraints 
+* a new {id :int}
+* For the above example ,the request will be routed only if this id is of type integer 
+
+---------------------------------------------------------
+Understanding Routing Attributes
+--> By Default a GET request on a URL , Web API will route the request to a method name that is GET or starts with GET
+* Example : A GET request on a URL can invoke any of the Action Methods
+* Get()
+* GetCustomers()
+
+--> Or alternatively, you can decorate the action method with any of the attribute 
+*HttpGet
+*HttpPost
+*HttpPut
+*HttpDelete
+
+--> You can also use {AcceptVerbs} attribute to allow only certain request to a method
+--> To prevent a method from getting invoked , you can use the NonAction attribute 
+----------------------------------------------------------------------------------
+
+
+Q: What is OAuth?
+Ans: OAuth (Open Authorization) is an open standard for token-based authentication and authorization. OAuth, allows third-party services, 
+such as Facebook, to use account information from an end-user without exposing the user's password.
+
+Q: What is OAuth 1.0?
+Ans: OAuth 1.0 addressed delegation with a framework based on digital signatures in December 2007. It was secure and it was strong. 
+However, OAuth 1.0 required crypto-implementation and crypto-interoperability. Although safe, implementing this has been a challenge for many developers. 
+Then arrived OAuth 2.0 in October 2012. NoteThis specification was obsoleted by OAuth Core 1.0 Revision A on June 24th, 2009 to address a session fixation attack.
+
+Q: What is OAuth 2.0?
+Ans:
+OAuth 2.0 released in October 2012 to overcome the problem as specified above in OAuth 1.0. 
+The OAuth 2.0 authorization framework allows a third-party application to gain limited access to an HTTP service, 
+either on behalf of a resource owner by orchestration of an approval agreement between the resource owner and the HTTP service, 
+or by requiring the third-party application to obtain access on its own behalf.
+
+Q: What is OAuth2 grant type?
+Ans: An grant is a credential representing the resource owner's authorization (to access its protected resources) used by the client to obtain an access token.
+This specification defines four grant types:
+
+Authorization Code
+Implicit
+Resource Owner Password Credentials
+Client Credentials
+
+Q: How to secure the generated token or secure sensitive data.
+Normally, these credentials are stored in the config properties. Storing credentials the secure way is a challenge with limiting access and a true secure storage. 
+Vault is the solution for storing sensitive data. It provide secure secret storage, data encryption, support for secret revocation.. 
+Spring Cloud Vault is a configuration extension similar to Spring Cloud Config. 
+Spring Cloud Config targets external configuration management backed by data stored in various repositories, such as GitHub, SVN or even Vault.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+   
+  
+
+  

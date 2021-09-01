@@ -1,0 +1,304 @@
+. What is branch testing and what is boundary testing? ↑
+The testing of all the branches of the code, which is tested once, is known as branch testing.
+While the testing, that is focused on the limit conditions of the software is known as boundary testing.
+
+2. What do you mean by the term QA? ↑
+Quality assurance is used to boost customer confidence, the organization’s ability and work efficiency. 
+It is a methodology used in the development of products that make sure a certain level of quality.
+
+3. Name some automation challenges that SQA team faces while testing? ↑
+Adaptability of test case for automation
+Mastering the automation tool
+Reusability of automation script
+Automating complex test cases
+
+4. What are advantages of destructive testing? ↑
+Determines quality of welds
+Encertains compliance with regulations
+Verifies properties of a material
+Helps you to reduce costs, failures and accidents
+
+5. What is the difference between verification and validation? ↑
+Verification
+
+The process of evaluating services of a development to determine whether software meets the listed requirements.
+It is done before the validation.
+Activities involved in validation are inspections, meetings and reviews.
+Verification is static testing. Validation
+
+The process of evaluating software at the end of the process to find out whether software meets the customer expectations.
+
+It is done after the verification.
+Activities involved in validation are grey box testing, white box testing and black box testing.
+Validation is dynamic testing.
+6. What is the role of QA (Quality assurance)? ↑
+QA is responsible for monitoring the process to be done for project development. It also tracks the results and adjusts the process to meet the expectations.
+
+7. What are the various types of software testing? ↑
+Smoke testing
+Functional testing
+Shakeout testing
+Unit testing
+Load testing
+Integration testing
+
+
+8. What does CRUD testing stand for? ↑
+CRUD means create, read, update and delete.
+
+9. What is volume testing? ↑
+A kind of software application identifying whether the system can handle maximum amount of data or volume is known as volume testing.
+
+10. What are roles of software quality assurance engineer? ↑
+The roles of software quality assurance engineer are as follows:
+
+Software design
+Change management
+Integration software
+Program testing
+Program testing
+Control of source code
+11. Name some tools used by a tester. ↑
+OpenSTA
+YSlow for FireBug
+WinSCP
+Selenium
+FireBug
+12. Define cause effect graph. ↑
+It describes a relationship between a given outcome and all the aspects that affect the outcome.
+
+13. What kind of test you do on the web based application? ↑
+Here are the tests we do on the web based application:
+
+Usability testing
+Load and stress testing
+Security testing
+Functionality testing
+Configuration testing
+14. What is a use case? ↑
+A use case helps you know the actions of the user and the answer of the system found in a particular functionality. It encompasses revision, exceptions and cover page.
+
+15. What is the difference between the QA and software testing? ↑
+The role of QA (Quality Assurance) is to monitor the quality of the "process" used to produce the software. While the software testing, is the process of ensuring the functionality of final product meets the user's requirement.
+
+16. What is the difference between build and release? ↑
+Build: It is a number given to Installable software that is given to the testing team by the development team.
+
+Release: It is a number given to Installable software that is handed over to the customer by the tester or developer.
+
+17. What is bug leakage and bug release? ↑
+Bug release is when software or an application is handed over to the testing team knowing that the defect is present in a release.
+During this the priority and severity of bug is low, as bug can be removed before the final handover.
+
+Bug leakage is something, when the bug is discovered by the end users or customer, and not detected by the testing team while testing the software.
+
+18. What is data driven testing? ↑
+Data driven testing is an automation testing framework, which tests the different input values on the AUT. 
+These values are read directly from the data files. The data files may include csv files, excel files, data pools and many more.
+
+19. What does the test strategy include? ↑
+The test strategy includes an introduction, resource, scope and schedule for test activities, test tools, test priorities, test planning and the types of test that has to be performed.
+
+20. Mention the different types of software testing? ↑
+Unit testing
+Integration testing and regression testing
+Shakeout testing
+Smoke testing
+Functional testing
+Performance testing
+White box and Black box testing
+Alpha and Beta testing
+Load testing and stress testing
+System testing
+21. What are the contents of test plans and test cases? ↑
+Testing objectives
+Testing scope
+Testing the frame
+The environment
+Reason for testing
+The criteria for entrance and exit
+Deliverables
+Risk factors
+22. What is Agile testing and what is the importance of Agile testing? ↑
+Agile testing is software testing, is testing using Agile Methodology. The importance of this testing is that, unlike normal testing process, 
+this testing does not wait for the development team to complete the coding first and then doing testing. The coding and testing both goes simultaneously. 
+It requires continuous customer interaction.
+
+23. What is Test case? ↑
+Test case is a specific condition to check against the Application Under Test. It has information of test steps, prerequisites, test environment, and outputs.
+
+24. What is quality audit? ↑
+The systematic and independent examination for determining the effectiveness of quality control procedures is known as the quality audit.
+
+25. Explain stress testing, load testing and volume testing. ↑
+Load Testing: Testing an application under heavy but expected load is known as Load Testing. Here, the load refers to the large volume of users, messages, requests, data, etc.
+Stress Testing: When the load placed on the system is raised or accelerated beyond the normal range then it is known as Stress Testing.
+Volume Testing: The process of checking the system, whether the system can handle the required amounts of data, user requests, etc. is known as Volume Testing.
+26. What is thread testing? ↑
+A thread testing is a top-down testing, where the progressive integration of components follows the implementation of subsets of the requirements, as opposed to the integration of components by successively lower levels.
+
+27. What is configuration management? ↑
+It is a process to control and document any changes made during the life of a project. Release control, Change control and Revision control are the important aspects of configuration management.
+
+28. What is Ad Hoc testing? ↑
+It is a testing phase where the tester tries to break the system by randomly trying the system's functionality. It can include negative testing as well.
+
+29. Explain what are test driver and test stub and why it is required? ↑
+The stub is called from the software component to be tested. It is used in top down approach.
+The driver calls a component to be tested. It is used in bottom up approach.
+It is required when we need to test the interface between modules X and Y and we have developed only module X. So we cannot just test module X but if there is any dummy module we can use that dummy module to test module X.
+30. Explain what is Bug triage. ↑
+A bug triage is a process to:
+
+Ensure bug report completeness
+Assign and analyze the bug
+Assigning bug to proper bug owner
+Adjust bug severity properly
+Set appropriate bug priority
+31. Explain what is traceability matrix? ↑
+A test matrix is used to map test scripts to requirements.
+
+32. Explain what is the difference between Regression testing and Retesting? ↑
+Retesting is carried out to check the defects fixes, while regression testing is performed to check whether the defect fix have any impact on other functionality.
+
+33. Explain what is the rule of a "Test Driven Development"? ↑
+The rule of a Test Driven Development is to prepare test cases before writing the actual code. Which means you are actually be writing code for the tests before you write code for the application.
+
+34. Mention what are the types of documents in SQA? ↑
+The types of documents in SQA are
+
+Requirement Document
+Test Metrics
+Test cases and Test plan
+Task distribution flow chart
+Transaction Mix
+User profiles
+Test log
+Test incident report
+Test summary report
+35. Explain what is MR and what information does MR consists of? ↑
+MR stands for Modification Request also referred as Defect report. It is written for reporting errors/problems/suggestions in the software.
+
+36. What is Quality Control? ↑
+Quality Control is the process of finding defects and providing suggestions to improve the quality of the software. The methods used by Quality Control are usually established by quality assurance. It is the primary responsibility of the testing team to implement quality control.
+
+37. When do you think QA activities should start? ↑
+QA activity should start at the beginning of the project. The more early it starts the more beneficial it is to set the standard for achieving the quality.
+
+The cost, time and efforts are very challenging in case the QA activities get delayed.
+
+38. Can you explain the Software Testing Life Cycle? ↑
+Software Testing Life Cycle refers to a testing process that has specific steps to be executed in a definite sequence to ensure that the quality goals have been met.
+
+39. What is a good test case? ↑
+In simple words, a good test case is one that finds a defect. But all test case will not find defects, so a good test case can also be one which has all the prescribed details and coverage.
+
+40. What is Negative testing? How is it different from Positive testing? ↑
+Negative testing is a technique that validates that the system behaves gracefully in case of any invalid inputs. For example, in case the user enters any invalid data in a text box, the system should display a proper message instead of the technical message which the user does not understand.
+
+Negative testing is different from positive testing in a way that positive testing validates that our system works as expected and compares the test results with the expected results.
+
+Most of the time scenarios for negative testing are not mentioned in the functional requirement documents. As a QA we have to identify the negative scenarios and should have provisions to test those.
+
+41. What is the difference between Functional and Non-functional testing? ↑
+Functional testing deals with the functional aspect of the application. This technique tests that the system is behaving as per the requirement and specification. These are directly linked with customer requirements. We validate the test cases against the specified requirement and make the test results as pass or fail accordingly.
+
+Examples include regression, integration, system, smoke, etc
+
+Nonfunctional testing, on the other hand, tests the non-functional aspect of the application. It does not focus on the requirement, but environmental factors like performance, load, and stress. These are not explicitly specified in the requirement but are prescribed in the quality standards. So, as QA we have to make sure that these testing are also given sufficient time and priority.
+
+42. What is the difference between severity and priority? ↑
+Issue severity and issue priority are important for proper issue management. Severity represents the harshness of the issue, while priority represents how urgently the issue should be resolved.
+
+Severity is a characteristic that is precisely defined as it is based on how the issue affects the end users. If the end user will be able to normally interact with the application and the normal use of the application is not obstructed, then the severity is low. But if the end user encounters application crashes or similar problems while using the application, the severity increases to high.
+
+On the other hand, the value for priority is defined by the individual judgment of a responsible person in accordance with the specified requirements. Usually, the priority increases as the issue is more reachable by the end user.
+
+43. In test automation, we use both assert and verify commands. What is the difference between them and when are they used? ↑
+The essential part of testing is the validation of results. In test automation, throughout each test case, we make validation checks to assure that we are getting the right results.
+
+In order to perform those checks, for example by using Selenium framework, we use the Assert* and Verify* classes of commands.
+
+Both assert and verify command groups check if the given conditions are true. The difference is what happens if the condition is false and the check fails. When an assert command fails, the code following it will not be executed and the test will break immediately. On the other hand, when a verify command fails, the code will continue with execution regardless.
+
+We use assert commands when the code following them depends on their success. E.g. we want to perform actions on a page only if we are logged in as an admin user. In that case, we will assert that the currently logged-in user equals the admin user, and test code will execute only if that condition is met—otherwise there’s no point, because we know we’re testing in the wrong environment.
+
+We use verify commands when the code after them can be executed regardless of the condition having been met. E.g. checking a web page title: We just want to make sure that the page title is as expected and we will log the outcome of the verify command. An incorrect title alone shouldn’t affect the rest of what’s being tested.
+
+44. When is test automation not desirable? ↑
+When the validation depends on the person performing the test (UI/UX, usability, look-and-feel).
+When the feature is being developed with constant changes and automating the test cases would mean a waste of resources.
+When the test cases have extreme complexity and automating them would be a waste of resources.
+When the requirement is for testers to perform manual sessions in order to gain deeper insight into the system.
+45. Describe the dimensions of the risk in QA? ↑
+The dimensions of the risk are:
+
+Schedule: Unrealistic Schedules, to develop a huge software in a single day.
+Client: Ambiguous requirements definition, requirements are not clear, changes in requirement.
+Human Resource: Non - availability of sufficient resources with the skill level expected in the project.
+System Resources: Non-availability of acquiring all critical resources, either hardware and software tools or license for software will have an adverse effect.
+Quality: Compound factors like lack of resources along with a tight delivery schedule and frequent changes to the requirement will affect the quality of the product tested.
+46. What is Monkey testing? ↑
+Monkey testing is a type of black box testing used to test the application by providing random inputs to check the system behavior such as to check the system, whether it is crashing or not. This type of testing is performed automatically whenever the user provides the random inputs to check the system behavior
+
+47. What are Smart Monkeys in QA? ↑
+Smart monkeys are those which have a brief idea about the application.
+They know that where the pages of an application will redirect to which page.
+They also know that the inputs that they are providing are valid or invalid.
+If they find any error, then they are smart enough to file a bug.
+They also know that what are the menus and buttons.
+48. What are Dumb Monkeys in QA? ↑
+Dumb Monkeys are those which have no idea about the application.
+They do not know about the pages of an application will redirect to.
+They provide random inputs, and they do not know about the starting and ending point of the application.
+They do not know much about the application, but still, they find bugs such as environmental failure or hardware failure.
+They also do not know much about the functionality and UI of an application.
+49. What are the differences between Preventive and Reactive approaches? ↑
+Preventive Approach: It is also known as the Verification process. Preventive is the approach to prevent defects. In this approach, tests are designed in its early stages of Software Development Lifecycle before the software has developed. In this approach, testers try to prevent defects in the early stages; it comes under Quality Analysis.
+
+Reactive Approach: It is also known as Validation Process. This approach is to identify defects. In this approach, tests are designed to execute after the software's development. In this approach, we try to find out the defects. It comes under Quality Control.
+
+50. What is the Quality Audit? ↑
+An Audit is defined as on-site verification activity, such as inspection or examination, of a processor quality system. Quality Audit is the process of systematic analysis of a quality system carried out by an internal or external quality auditor, or an audit team. Quality Audits are performed at predefined time intervals and ensure that the institution has clearly defined internal system monitoring procedures linked to effective action. Audits are an essential management tool to be used for verifying objective evidence of processes.
+
+51. Explain Black Box testing. ↑
+It is a specification-based technique where the testers view the software as a black box with inputs and outputs.
+In black box testing, the testers do not know about how the software is structured inside the box, they know only what the software does but do not know how the software does.
+This type of technique is valid for all the levels of testing where the specification exists.
+52. Explain White Box testing. ↑
+White box testing is a testing technique that evaluates the internal logic and structure of the code.
+In order to impement the white box testing, the testers should have the knowledge of coding so that they can deal with the internal code. They look into the internal code and finds out the unit which is malfunctioning.
+53. How is monkey testing different from adhoc testing? ↑
+Both monkey testing and adhoc testing follows the informal approach, but in monkey testing, we do not need to have deep knowledge of the software. However, to perform adhoc testing, testers should have a deep knowledge of the software.
+
+54. What is Test strategy? ↑
+Test strategy helps to define the testing process that would take place in a software development cycle. It consists of testing tasks, and lets managers and developers know about the issues as and when they get discovered.
+
+55. What do you know about the ISO 9000 and how it can be helpful for a business? ↑
+It is basically a quality assurance certification and has some of the best guidelines and standard for the adopters and those who consider it. It is actually related to the quality management systems and always makes sure that the customers are getting the desired level of quality. The certification is very useful when it comes to enhancing the domestic, as well as international trade. In addition to this, it is helpful for boosting the overall profit of an organization. The extreme customer satisfaction, reduction in waste and the better productivity of the employees can also be assured.
+
+56. What does CMMI stand for and what exactly it is? ↑
+It simply means Capability Maturity Model Integrated and is basically a process improvement strategy which is simply developed for the purpose of getting the desired outcomes. Many organizations have already adopted this model.
+
+57. What do you mean by Volume testing and what is its aim? ↑
+It is basically a test which is performed on a product or a software and which justifies what amount of data can be handled by the product or the software. Its main aim is to check whether the software can work beyond its limit or not and the factors that can affect its functionality.
+
+58. What is Configuration management? ↑
+It is basically an approach that justifies the documentation and the control of changes which are made to a project.
+
+59. What is a software development life cycle? ↑
+The software development life cycle, also known as the SDLC, describes the process through which software is developed. There are slight differences in what different organizations call these specific steps, but they all start with development and end with application maintenance. The most popularly accepted steps are: requirement phase, the design phase, the coding phase, the testing phase, release, and maintenance.
+
+60. What is a primary key? What is a unique key? How are they different? ↑
+A primary key is a column in a database where each row has a unique value. Each table has only one primary key. No NULL values are allowed. A unique key is a column or group of columns that together hold unique values. A table can have more than one unique key. For example, in a list of American Citizens, the column with social security numbers would be a primary key whereas the first and last name columns combined with phone number would be a unique key.
+
+61. What is the difference between requirements and specifications? ↑
+Requirements are the features, functions, and goals of the proposed software system as defined by the client. For example, a company may want their software to “Store shopping cart data for at least 30 days.” This would be a requirement.
+
+Specifications, on the other hand, explain how these features, functions, and goals are to be met. For example, a specification would be “A user’s session information will be persisted into the operational datastore upon logout or session timeout and maintained for 30 days.”
+
+62. When do we perform functional testing? ↑
+Functional testing tests the code from end-to-end, making sure that all parts of the application are working –- even the parts that occur during failures. Functional testing should start early. Planning can be initiated during the analysis phase, and functional testing should start well before development is complete. It is common to start running functional tests within the QA department once a Minimum Viable Product is released.
+
+63. What is application programming interface? ↑
+An application programming interface, also known as an API, is a programming language that allows different applications to communicate with one another. Companies often release APIs so that other organizations can build products that are based off of this original software. An example of an API would be Java’s JDBC (Java DataBase Connectivity)

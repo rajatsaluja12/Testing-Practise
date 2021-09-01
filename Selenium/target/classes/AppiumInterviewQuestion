@@ -1,0 +1,270 @@
+ 1. List out the types of mobile app testing. 
+The types of mobile app testing include:
+
+Usability testing
+Compatibility testing
+Interface testing
+Services testing
+Low-level resource testing
+Performance testing
+Operational testing
+Installation tests
+Security testing
+
+--------------------------------------------------------------------------------------
+
+2. What is the Appium philosophy? ↑
+These are the four philosophies Appium is based around:
+
+Test the same app you submit to the marketplace.
+Write your tests in any language, using any framework.
+Use a standard automation specification and API.
+Build a large and thriving open-source community effort.
+
+--------------------------------------------------------------------------------------
+
+3. What Is Appium? ↑
+Appium is an open source, cross-platform automation testing tool. It is used for automating test cases for native, hybrid and web applications. 
+The tool has a major focus on both Android and iOS apps and was only restricted to the mobile application testing domain. 
+Recently, a few updates back, Appium also announced that they will support the testing of desktop applications for windows. Appium is developed and maintained by Sauce Labs.
+
+--------------------------------------------------------------------------------------
+4. List out the Appium abilities. ↑
+Test Web
+Provides cross-platform for Native and Hybrid mobile automation.
+Support JSON wire protocol.
+It does not require recompilation of App.
+Support automation test on a physical device as well as simulator or emulator both.
+It has no dependency on a mobile device.
+
+--------------------------------------------------------------------------------------
+
+5. Do you need a server machine to run tests on Appium? ↑
+No! Appium promotes a 2-tier architecture where a test machine connects to a test server running Appium and automating the whole thing. 
+However this configuration is not mandatory, you can have Appium running on the same machine where your test runs. 
+Instead of connecting to a remote host, your test will connect to Appium using the loopback address.
+
+--------------------------------------------------------------------------------------
+
+6. List some issues Faced With Cross-Platform Testing. ↑
+Generally, the issue depends upon the different OS/device version. It might be that the same application is working on one OS while it might not work on another version. 
+For example, we faced an issue that our application was working fine on iOS 6.x version devices but on tapping a few modules on iOS 5.x devices application crashes and the same happened with 2.3.5 Vs.
+
+--------------------------------------------------------------------------------------
+
+7. How can you run iOS tests without Appium? ↑
+For older versions of iOS, Appium might not be supported. For instance, Appium supports foriOS versions 6.1 and later. 
+For earlier versions of iOS, the tool or driver used to drive your mobile applications automated test is called iWebdriver.
+
+To obtain a simulator driven by iWebdriver use the Platforms Configurator and select Selenium for the API instead of Appium. 
+With an emulator driven by iWebdriver, you will be able to test Mobile Web Application only. 
+In addition, in the Sauce Labs test, you will notice a “Selenium Log” tab which has the output of iWebdriver.
+
+--------------------------------------------------------------------------------------
+
+8. List out the most common problem that a tester faces while performing mobile testing in Cloud Computing. ↑
+Subscription model
+High Costing
+Lock-in
+Internet connectivity issues
+Immense consumption of time in image-based automation testing.
+Automation is restricted by the framework
+
+--------------------------------------------------------------------------------------
+9. What is Appium Inspector and why is it used? ↑
+It is similar to the Selenium IDE plugin and enables the record and playback support in Appium. 
+It captures the moves of a native application by inspecting DOM and produces the test scripts in any desired language. However, Appium Inspector does not support Windows and uses the viewer.
+
+--------------------------------------------------------------------------------------
+
+10. List out the pre-requisite to use Appium. ↑
+Pre-requisite to use APPIUM is
+
+ANDROID SDK
+JDK
+TestNG
+Eclipse
+Selenium Server JAR
+Webdriver Language Binding Library
+APPIUM for Windows
+APK App Info On Google Play
+js
+
+--------------------------------------------------------------------------------------
+11. What language does Appium support? ↑
+Appium support any language that support HTTP request like Java, JavaScript with Node.js, Python, Ruby, PHP, Perl, etc.
+
+--------------------------------------------------------------------------------------
+
+12. Do you need a server machine to run tests on Appium? ↑
+No, you don't need server machine to run tests on Appium. Appium facilitates a 2-tier architecture where a test machine connects to a test server running Appium and automating the whole thing. 
+You can have Appium running on the same machine where your test runs.
+
+--------------------------------------------------------------------------------------
+
+13. Is it possible to interact with my apps using Javascript while I am testing with Appium? 
+Yes, it is possible to interact with App while using Javascript. When the commands run on Appium, the server will send the script to your app wrapped into an anonymous function to be executed.
+
+--------------------------------------------------------------------------------------
+
+14. Mention what are the most difficult scenarios to test with Appium? ↑
+The most difficult scenario to test with Appium is data exchange.
+
+--------------------------------------------------------------------------------------
+
+15. While using Appium can I run my tests in a multithreaded environment? ↑
+Yes, you can run the test in a multithreaded environment but you have to ensure that no more than one test runs at the same time against the same Appium server.
+
+--------------------------------------------------------------------------------------
+
+16. In Android, do you need an app's .apk to automate using Appium or you also need app in my workspace? 
+In Android, you only need .apk file to automate using Appium.
+
+--------------------------------------------------------------------------------------
+
+17. Difference between Selenium and Appium? ↑
+Selenium is an open-source tool that allows automation for Web applications run in Browsers. Appium is used for automating mobile applications and web applications which run on mobile devices.
+
+--------------------------------------------------------------------------------------
+
+18. Disadvantages of using Appium. ↑
+The commands are generally translated to the actual device which affects the performance.
+No support available for testing on Android devices lower than version 4.2.
+--------------------------------------------------------------------------------------
+
+19. What is XPATH? ↑
+In general, XPATH enables testers to navigate through the XML structure of any document, and this can be used on both HTML and XML documents.
+
+--------------------------------------------------------------------------------------
+
+20. What is Explicit and Implicit wait in Appium? ↑
+Implicit wait – Delay added for a specific time.
+Explicit wait – Delay added for a specific condition.
+
+--------------------------------------------------------------------------------------
+
+21. List some common Exceptions in Appium. ↑
+SessionNotFoundException – Thrown when Appium Connection is disconnected or session not established.
+ElementNotFoundException – Thrown when you attempt to find an Element and then the element is not Found.
+WebDriverException – Thrown when the Driver is not existent.
+
+--------------------------------------------------------------------------------------
+
+22. Explain data exchange in Appium. ↑
+Data exchange in Appium can be defined as exchanging information hosted by complex objects. 
+These objects are stored in different parts of the web view application which is under testing just like a window object. 
+Data exchange can be understood by considering a scenario in which events are dispatched and captured. 
+The application can perform many functions and the way the data flows can also vary which can cause problems during testing.
+
+--------------------------------------------------------------------------------------
+
+23. Name the tools you used in debugging Appium. ↑
+Logs are generally used for detecting the cause of the issue and to find out the reason for failure in Appium.
+
+For iOS, iPhone configuration utility can be used
+For Android, Monitor.bat is used for debugging. If logs from these tools are provided, then the cause of the error can be easily found out.
+
+--------------------------------------------------------------------------------------
+24. What are native Apps? ↑
+An open source tool that is required for mobile web, automating Native and hybrid application on Android and IOS platform is known as Appium which was in 2012. 
+Appium is considered to be a cross-platform that will allow you to write tests that are on multiple platforms like Android and IOS. 
+They do this using the same API. This facility will enable you to do reuse codes between Android and IOS test sites.
+
+Those Apps are written by using Android SDKs and IOS are known as Native Apps.
+
+--------------------------------------------------------------------------------------
+
+25. What are Mobile Web Apps? ↑
+There are mobile web pages that are those web apps that are accessed with mobile browsers. 
+In the case of the IOS platform, Appium supports Safari and for the Android platform, Chrome or any other built-in browser is used.
+
+--------------------------------------------------------------------------------------
+
+26. What are hybrid apps? ↑
+Those apps that are equipped with a wrapper around the web view is known as a Hybrid app. This is native control that will facilitate the interaction with the web content.
+
+--------------------------------------------------------------------------------------
+
+27. Name the test frameworks that are supported by Appium. ↑
+Test frameworks are not supported by appium since there is no need to do it. All test frameworks can be used by Appium. Some examples are .net unit test and NUnit.
+ A test for Appium is written using one of the drivers so that the tests can interface with the appium in case of external dependency.
+
+--------------------------------------------------------------------------------------
+
+28. How can you find the DOM element or X path in case of a mobile application? ↑
+In order to find the path between DOM elements or X path elements you can make use of "UIAutomateviewer" in the case of Android application.
+
+--------------------------------------------------------------------------------------
+
+29. In the case of the Android platform is it necessary to have an app’s .apk so that it can automate using Appium or do we also need an app in the workspace? ↑
+In case of the android platform, to automate using Appium you will require an only .apk file.
+
+--------------------------------------------------------------------------------------
+
+30. What is the underlying API that Appium follows? ↑
+The underlying selenium API is followed by Appium so that it can automate test cases.
+It is said that since all the selenium APIs are present in Appium as well so Appium is an extension to the selenium.
+
+--------------------------------------------------------------------------------------
+
+31. How can you inspect elements that are present in the Native Android App? ↑
+With the help of the UI Automator tool that is present in Android SDK, you will be able to access those object locators that are part of the Android Native app.
+
+--------------------------------------------------------------------------------------
+
+32. Mention the method with which you can scroll down in App? ↑
+With the help of the scrollTo () method, you will be able to scroll down in App. Also, such a method will help you to automatically scroll until the specific text is not match.
+
+--------------------------------------------------------------------------------------
+
+33. How can you inspect elements on the IOS apps? ↑
+With the help of using an Appium inspector that is a GUI based tool you can identify elements on IOS apps. These GUI based tools are quite similar to that of selenium IDE.
+
+--------------------------------------------------------------------------------------
+
+34. Write the command that will allow you to identify objects uniquely when there are multiple objects within the same class name using Appium? ↑
+With the help of the command driver.findElements (By.className) it is possible to identify the elements uniquely.
+--------------------------------------------------------------------------------------
+
+35. What are Testability layers? ↑
+In order to make things better, as a developer, what you can do is adding testability layers to your app. 
+The logic behind this approach is simply having some test-related objects in your app which are activated only when your tests run.
+
+--------------------------------------------------------------------------------------
+
+36. What is the most difficult scenario to test with Appium? ↑
+The most difficult scenario to test on Appium is an environment with data exchange as it requires testing of varied modules with different device testing, making the process very complex.
+
+--------------------------------------------------------------------------------------
+
+37. What are desired capabilities in Appium? ↑
+In Appium, Desired Capabilities are a set of keys and values sent to the main Appium Server to relay as to what kind of automation should be started. 
+There are various capabilities that are used to modify the behavior of the server accordingly during the automation process.
+
+--------------------------------------------------------------------------------------
+
+38. What is UDID? ↑
+UDID stands for Unique Device Identifier. It is required during the process of Android application development or also during Android App automation to get a unique ID of a specific Android device.
+
+--------------------------------------------------------------------------------------
+
+39. What is UiAutomator in Appium? ↑
+In Appium, UI Automator is a User Interface testing framework best suited for cross-app functional UI testing across systems and other installed apps. 
+The UI Automator APIs allow you to perform various operations such as opening the Settings menu or also opening the app launcher in a test device.
+
+--------------------------------------------------------------------------------------
+
+40. Mention the method with which you can swipe in App. 
+Yes, Using TouchAction.press().
+
+--------------------------------------------------------------------------------------
+
+41. What is a Xcode in Appium? ↑
+Xcode is an integrated development environment for OS X and iOS.
+
+--------------------------------------------------------------------------------------
+
+42. What is the Full form of apk extension? ↑
+apk stands for Android Application Package File.
+
+--------------------------------------------------------------------------------------

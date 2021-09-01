@@ -1,0 +1,369 @@
+1. What are manipulators? ↑
+Manipulators are the functions which can be used in conjunction with the insertion (<<) and extraction (>>) operators on an object. Examples are endl and setw.
+-------------------------------------------------------------------------------------------------------------------------
+
+2. What is a virtual function? ↑
+A virtual function is a member function of a class, and its functionality can be overridden in its derived class. 
+This function can be implemented by using a keyword called virtual, and it can be given during function declaration. 
+A virtual function can be declared using a token(virtual) in C++. It can be achieved in C/Python Language by using function pointers or pointers to function.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+3. What is a ternary operator? 
+The ternary operator is said to be an operator which takes three arguments. Arguments and results are of different data types, and it depends on the function. 
+The ternary operator is also called a conditional operator.
+-------------------------------------------------------------------------------------------------------------------------
+
+4. What is method overriding? ↑
+Declaring a method in sub class which is already present in parent class is known as method overriding. 
+Overriding is done so that a child class can give its own implementation to a method which is already provided by the parent class. 
+In this case the method in parent class is called overridden method and the method in child class is called overriding method.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+5. What is the main difference between overloading and overriding? ↑
+Overloading is static Binding, whereas Overriding is dynamic Binding. 
+Overloading is nothing but the same method with different arguments, and it may or may not return the equal value in the same class itself. 
+Overriding is the same method names with the same arguments and return types associated with the class and its child class.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+6. What is the difference between new and override? ↑
+The new modifier instructs the compiler to use the new implementation instead of the base class function.
+ Whereas, Override modifier helps to override the base class function.
+ 
+ -------------------------------------------------------------------------------------------------------------------------
+
+7. How many instances can be created for an abstract class? ↑
+Zero instances will be created for an abstract class. In other words, you cannot create an instance of an Abstract Class.
+
+8. What is Polymorphism? ↑
+Polymorphism means that some code or operations or objects behave differently in different contexts. In C++, following features support polymorphism.
+
+Compile Time Polymorphism: Compile time polymorphism means compiler knows which function should be called when a polymorphic call is made. 
+C++ supports compiler time polymorphism by supporting features like templates, function overloading and default arguments.
+
+Run Time Polymorphism: Run time polymorphism is supported by virtual functions. 
+The idea is, virtual functions are called according to the type of object pointed or referred, not according to the type of pointer or reference. 
+In other words, virtual functions are resolved late, at runtime.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+9. What is Abstraction? ↑
+Abstraction is one of the key concepts of object-oriented programming (OOP) languages. 
+Its main goal is to handle complexity by hiding unnecessary details from the user. 
+That enables the user to implement more complex logic on top of the provided abstraction without understanding or even thinking about all the hidden complexity.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+10. What is hierarchical inheritance? ↑
+Hierarchical inheritance refers to inheritance where one base class has more than one subclasses. For example, the vehicle class can have ‘car’, ‘bike’, etc as its subclasses.
+-------------------------------------------------------------------------------------------------------------------------
+
+11. What is dynamic polymorphism? ↑
+Runtime polymorphism or dynamic polymorphism (dynamic binding) is a type of polymorphism which is resolved during runtime. An example of runtime polymorphism is method overriding.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+12. What is static polymorphism? ↑
+Static polymorphism (static binding) is a kind of polymorphism that occurs at compile time. An example of compile-time polymorphism is method overloading.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+13. What is encapsulation? ↑
+Encapsulation refers to binding the data and the code that works on that together in a single unit. 
+For example, a class. Encapsulation also allows data-hiding as the data specified in one class is hidden from other classes.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+14. What is the difference between Procedural programming and OOPS? ↑
+Procedural language is based on functions but object oriented language is based on real world objects.
+Procedural language gives importance on the sequence of function execution but object oriented language gives importance on states and behaviors of the objects.
+Procedural language exposes the data to the entire program but object oriented language encapsulates the data.
+Procedural language follows top down programming paradigm but object oriented language follows bottom up programming paradigm.
+Procedural language is complex in nature so it is difficult to modify, extend and maintain but object oriented language is less complex in nature so it is easier to modify, extend and maintain.
+Procedural language provides less scope of code reuse but object oriented language provides more scope of code reuse.
+
+-------------------------------------------------------------------------------------------------------------------------
+15. What is the diamond problem in inheritance? ↑
+In case of multiple inheritance, suppose class A has two subclasses B and C, and a class D has two super classes B and C.
+If a method present in A is overridden by both B and C but not by D then from which class D will inherit that method B or C? This problem is known as diamond problem.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+16. Why Java does not support multiple inheritance? ↑
+Java was designed to be a simple language and multiple inheritance introduces complexities like diamond problem. 
+Inheriting states or behaviors from two different type of classes is a case which in reality very rare and it can be achieved easily through an object association.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+17. What is Aggregation? ↑
+Aggregation is also known as “HAS-A” relationship. When class Car has a member reference variable of type Wheel then the relationship between the classes Car and Wheel is known as Aggregation. 
+Aggregation can be understood as “whole to its parts” relationship. Car is the whole and Wheel is part. Wheel can exist without the Car. Aggregation is a weak association.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+18. What is the difference between Association and Dependency? ↑
+The main difference between Association and Dependency is in case of Association one class has an attribute or member variable of the other class type but in case of Dependency a method takes an argument of the other class type or a method has a local variable of the other class type.
+
+19. What is Composition? ↑
+Composition is a special form of Aggregation where the part cannot exist without the whole. Composition is a strong Association. 
+Composition relationship is represented like aggregation with one difference that the diamond shape is filled.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+20. What Is Operator Overloading? 
+Operator overloading is a function where different operators are applied and depends on the arguments. Operator,-,* can be used to pass through the function , and it has their own precedence to execute.
+
+21. What Is The Use Of Finalize Method? ↑
+Finalize method helps to perform cleanup operations on the resources which are not currently used. 
+Finalize method is protected , and it is accessible only through this class or by a derived class.
+
+22. What Is Exception Handling? ↑
+Exception is an event that occurs during the execution of a program. Exceptions can be of any type – Run time exception, Error exceptions. 
+Those exceptions are handled properly through exception handling mechanism like try, catch and throw keywords.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+23. How Can We Call The Base Method Without Creating An Instance? ↑
+Yes, it is possible to call the base method without creating an instance. And that method should be,.Static method.Doing inheritance from that class.-Use Base Keyword from derived class.
+
+24. What Is Pure Virtual Function? 
+A pure virtual function is a function which can be overridden in the derived class but cannot be defined. A virtual function can be declared as Pure by using the operator =0.
+
+25. Explain the concept of constructor? 
+Constructor is a special method of a class, which is called automatically when the instance of a class is created. 
+It is created with the same name as the class and initializes all class members, whenever you access the class.
+The main features of a constructor are as follows: - Constructors do not have any return type. - Constructors can be overloaded. 
+It is not mandatory to declare a constructor; it is invoked automatically by .NET Framework.
+ 
+ -------------------------------------------------------------------------------------------------------------------------
+
+26. How do you differentiate between a class and an object? ↑
+While closely related, these two terms differ in context. Being able to answer this question will show that you understand the relationship between the classes and objects involved in OOP. 
+When answering this question, provide real-world examples to illustrate your understanding.
+
+Example: "When I'm programming code using OOP, the class determines what the object itself is made of. A class is like a blueprint or template that shows the inner workings of an object. 
+Each object has its own qualities and behaviors based on its class."
+
+-------------------------------------------------------------------------------------------------------------------------
+
+27. How do structure and class differ? ↑
+Because there are many similarities and differences in structure and classes, you may be asked to specifically describe what makes them alike or different. 
+This will illustrate the depth of your understanding and whether you will be able to perform certain tasks accurately.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+28. Is Java a pure object-oriented language? if not why? ↑
+Java is not a pure object-oriented programming language e.g. there are many things you can do without objects e.g. static methods. Also, primitive variables are not objects in Java.
+
+29. What are the rules of method overloading and overriding in Java? ↑
+One of the most important rules of method overloading in Java is that the method signature should be different i.e. either the number of arguments or the type of arguments. 
+Simply changing the return type of two methods will not result in overloading, instead, the compiler will throw an error. 
+On the other hand, method overriding has more rules e.g. name and return type must be the same, method signature should also be the same, the overloaded method cannot throw a higher exception, etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+30. What is the covariant method overriding in Java? ↑
+In the covariant method overriding, the overriding method can return the subclass of the object returned by the original or overridden method. 
+This concept was introduced in Java 1.5 (Tiger) version and it's very helpful in case the original method is returning general type like Object class, 
+because, then by using the covariant method overriding you can return a more suitable object and prevent client-side typecasting. 
+One of the practical use of this concept is when you override the clone() method in Java.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+31. Can we make a class both final and abstract at the same time? ↑
+No, you cannot apply both final and abstract keyword at the class at the same time because they are exactly opposite of each other. 
+A final class in Java cannot be extended and you cannot use an abstract class without extending and make it a concrete class.
+ As per Java specification, the compiler will throw an error if you try to make a class abstract and final at the same time.
+ 
+ -------------------------------------------------------------------------------------------------------------------------
+
+32. What problem is solved by the Strategy pattern in Java? ↑
+Strategy pattern allows you to introduce a new algorithm or new strategy without changing the code which uses that algorithm. 
+For example, the Collections.sort() method which sorts the list of the object uses the Strategy pattern to compare objects. 
+Since every object uses a different comparison strategy you can compare various objects differently without changing the sort method.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+33. What is the difference between Composition and Inheritance in OOP? ↑
+This is another great OOPS concept question because it tests what matters, both of them are very important from a class design perspective. 
+Though both Composition and Inheritance allows you to reuse code, formerly is more flexible than later. 
+Composition allows the class to get an additional feature at runtime, but Inheritance is static. You can not change the feature at runtime by substitution of a new implementation.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+34. Explain the concept of a hashtable. ↑
+Hashtable is used to store multiple items. Each of these items is linked with their own unique string key and can be accessed using the key associated with it.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+35. Can you explain what Access Modifiers are? ↑
+Access modifiers are used to figure out the scope of the method or variables accessible from other various objects or classes.
+
+Access modifiers can be of five types: - Private - Public - Protected - Friend - Protected Friend
+
+-------------------------------------------------------------------------------------------------------------------------
+36. Can we change the scope of the overridden method in the subclass? ↑
+Yes, we can change the scope of the overridden method in the subclass. 
+However, we must notice that we cannot decrease the accessibility of the method. The following point must be taken care of while changing the accessibility of the method.
+
+The private can be changed to protected, public, or default.
+The protected can be changed to public or default.
+The default can be changed to public.
+The public will always remain public.
+
+-------------------------------------------------------------------------------------------------------------------------
+37. What are the pillars of OOP theory? ↑
+The four fundamental concepts are:
+
+Abstraction
+Encapsulation
+Inheritance
+Polymorphism
+-------------------------------------------------------------------------------------------------------------------------
+38. What is a parametric constructor? ↑
+This is a constructor that passes on certain defined parameters to the new object or class.
+
+39. What is a friend function? ↑
+A friend function is a function that is permitted to access public, private, and protected information contained in the class it is ‘friends’ with. 
+This function must be defined inside the aforementioned class.
+
+40. What is early binding? ↑
+Early binding is when variables are assigned values before the program is compiled and run: directly in the code.
+
+41. What is late binding? ↑
+Late binding is when variables are assigned values after the program has been compiled: on or during runtime.
+
+42. What are tokens? ↑
+Tokens are instructions recognized by the compiler that cannot be broken down in any way. Some examples of tokens are keywords, constants, identifiers, string literals, and operators.
+
+43. What is the need of abstract class? ↑
+Suppose we were modeling the behavior of animals, by creating a class hierarchy that started with a base class called Animal. 
+Animals are capable of doing different things like flying, digging and walking, but there are some common operations as well like eating and sleeping. 
+Some common operations are performed by all animals, but in a different way as well. 
+When an operation is performed in a different way, it is a good candidate for an abstract method (forcing subclasses to provide a custom implementation).
+
+44. What is the key difference between concrete class and abstract class? ↑
+Concrete classes are those classes which has to declare body of abstract methods which extends or implements from abstract class or interface. 
+Abstract classes usually have partial or no implementation. On the other hand, Concrete classes always have full implementation of its behavior. 
+Unlike Concrete classes, Abstract classes cannot be instantiated.
+
+45. What are the advantages of object oriented programming? ↑
+Code Resusability: it can be acheived through inheritance and traits
+Modularity: it can be acheived through breaking large code into small modules, Modularity reduces complexity.
+Flexibility: it can be acheived through polymorphism
+Maintainability: it is to maintian code which follow Object Oriented Programming Concepts.
+Security: it can be acheived through Encapsulation
+Testability: it is easy to test.
+46. Why do we need OOPs? ↑
+It helps to reduce the complexity and also improves the maintainability of the system. When combined with the concepts of the Encapsulation and Polymorphism, Abstraction gives more power to the Object oriented programming languages.
+
+47. Why is OOP better than procedural? ↑
+Procedural programming does not have any proper way for hiding data so it is less secure. Object oriented programming provides data hiding so it is more secure. 
+In procedural programming, function is more important than data. In object oriented programming, data is more important than function.
+
+48. How a program can be structured using the concept of Object oriented programming? ↑
+The program can be structured by splitting the one big task into subtasks, create some function for the tasks that has to be worked upon and then write a program to instruct the 
+computer to perform the desired calculations on the basis of which the output will be generated. 
+As, the large amount of data or tasks will be separated into less complex programs then it will be easier to manage. 
+In object oriented program the program structure is maintained according to the objects made up from the class. 
+Every function is in a particular class that has an object calling certain properties and methods for implementation. 
+It can manage the complexity of the large pieces and will be able to create a modular approach towards the programming methodology.
+
+49. What are the properties that are defined in an Object model? ↑
+Object oriented programming always consists of an object model that includes state and behavior. The state defines the present condition of the system or an entity. 
+The behavior includes the data and the operations that are performed on those data. 
+Object represents the group of related functions and data structure that is used to give functionality to the functions. 
+The functions that are being represented are the object models. It consists of the data structure, data type and the instance variables. 
+Methods are used to hide the variables from the user and and define a high level in object model. 
+Object model also consists of the flow properties through which the object can be accessed with a defined relationship.
+
+50. Why is dynamic binding used in object-oriented programming? ↑
+Dynamic binding allows delaying the decision of running the program. 
+Dynamic binding is used to perform messaging transparently and routinely by allowing different objects to be binded on the run time. 
+It allows the declared pointer to find out the assigned values of a give procedure. Messages that are given with the programs are invoked indirectly. 
+Every method has a message expression that has to be found for implementation. 
+The class of the receiver is checked to locate the implementation of the method that is mentioned in the message. 
+When at run time the method is run then the complier dynamically bind the objects.
+
+51. What is Coupling? ↑
+OOPS Modules are dependent on each other. Coupling refers to level of dependency between two software modules.
+Two modules are highly dependent on each other if you have changed in one module and for supporting that change every time you have to change in dependent module.
+
+Loose Coupling is always preferred. Inversion of Control and dependency injections are some techniques for getting loose coupling in modules.
+
+52. What is Is-A and Has-A relationship? ↑
+An inheritance relationship is an "is-a" relationship. A composition relationship is a "has-a" relationship.
+
+Java
+1. How many types of constructors are used in Java? ↑
+Based on the parameters passed in the constructors, there are two types of constructors in Java.
+
+Default Constructor: default constructor is the one which does not accept any value. The default constructor is mainly used to initialize the instance variable with the default values. 
+It can also be used for performing some useful task on object creation. A default constructor is invoked implicitly by the compiler if there is no constructor defined in the class.
+Parameterized Constructor: The parameterized constructor is the one which can initialize the instance variables with the given values. 
+In other words, we can say that the constructors which can accept the arguments are called parameterized constructors.
+
+
+2. Why is Inheritance used in Java? ↑
+There are various advantages of using inheritance in Java that is given below.
+
+Inheritance provides code reusability. The derived class does not need to redefine the method of base class unless it needs to provide the specific implementation of the method.
+Runtime polymorphism cannot be achieved without using inheritance.
+We can simulate the inheritance of classes with the real-time objects which makes OOPs more realistic.
+Inheritance provides data hiding. The base class can hide some data from the derived class by making it private.
+Method overriding cannot be achieved without inheritance. By method overriding, we can give a specific implementation of some basic method contained by the base class.
+
+
+3. What is object cloning? ↑
+The object cloning is used to create the exact copy of an object. The clone() method of the Object class is used to clone an object. 
+The java.lang.Cloneable interface must be implemented by the class whose object clone we want to create.
+ If we don't implement Cloneable interface, clone() method generates CloneNotSupportedException.
+
+4. Can we override a method declared as private in java? ↑
+No, you can not override a private method in java.
+
+5. Can you override the method which is declared as final? ↑
+No, you can not override a private method in java.
+
+6. Is a method declared as final inherited in java? ↑
+Yes, it is inherited still you cannot override it.
+
+7. What are the different types of inheritance in java? ↑
+Single inheritance
+Multiple inheritance
+Multilevel inheritance
+Hierarchical inheritance
+Hybrid inheritance
+8. What are the problems might be created when you are trying to implement multiple inheritance concept in java? ↑
+The operations like casting, constructor chaining might cause problems when trying to implement multiple inheritance. 
+Even the compiler gets complications as to call which class method and which class gets priority.
+
+9. In a class which is the default access modifier in java? ↑
+The default access modifier is "default" which is also known as "package-private" (though you can't use this explicitly). 
+It means the field will be visible to the same package to which the class belongs. Java uses a "default" access modifier when no access modifier is present.
+
+10. Can a constructor be declared as private in java? ↑
+Yes, you can declare the constructor as private in java. If the constructor is declared as private, then the class cannot be instantiated, it can be instantiated from another method in the class.
+
+11. Why Encapsulation in java is called as Data hiding in java? ↑
+When a field is declared private in a class then it cannot be accessed by anyone outside the class and hides the fields within the class.Therefore, Encapsulation is also called data hiding.
+
+12. What is a wrapper class in java? ↑
+The wrapper class in java provides the mechanism to convert primitive type into object and object into primitive type. 
+The automatic conversion of primitive type into an object is known as autoboxing and object to primitive type is unboxing.
+
+13. Can a class extend two interfaces wherein they both have a method with the same name and signature in java? ↑
+No, a conflict will arise because the compiler will not be able to link a method call due to ambiguity. It will throw a compile-time error in java.
+
+14. Can struct have Parameterless constructor? ↑
+Structs cannot contain explicit parameterless constructors. Struct members are automatically initialized to their default values. 
+A default (parameter-less) constructor for a struct could set different values than the all-zeroed state which would be unexpected behavior.
+
+15. What is hybrid inheritance? ↑
+Hybrid inheritance is a combination of multiple and multi-level inheritance.
+
+16. Can constructor be static? ↑
+Constructor is implicitly called to initialize an object, so there is no purpose in having a static constructor. 
+Java does not permit to declare a constructor as static. A constructor always belongs to some object. If a constructor is static, an object of subclass cannot access.

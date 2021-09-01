@@ -1,0 +1,70 @@
+Download The Jmeter from the official website Apache
+you will get a zip file while downloading, unzip and then go to bin and run the exe file. no need to install anything
+prerequsite - java 8 and above
+
+---------------------------------------------------------
+Terminologies 
+
+Connection Time : Time to connect to Server from Client 
+	
+Response Time : is a measure of how responsive an application or subsystem is to a client request 
+
+Throughput : Indicates the number of transaction per second an application can handle , the amount of transaction produced over during a test,
+request per second , calls per day, hits per second, reports per year etc
+
+Scenarios : In the context of performance testing, a scenario is a sequence of steps in your application, 
+A scenario can represent a use case or a business function such as searching a product catalog, adding an item to a shopping cart or placing an order
+--------------------------------------------------------------------
+
+Performance Testing is a practice conducted to determine how a system performs in term of responsiveness and stabilty under a particular workload. 
+It can also serve to investigate, measure, validate or verify other quality attributes of the system , such as scalability , reliability usage.
+
+Bottleneck : Used to describe a single part of a system that prevents further processing or significantly degrades the performance of the system as a whole
+
+Capacity : The degree to which a system can perform data processing until performance degrades. For example, the number of new customer being added to a database 
+
+Concurrency : Normally this means the number of simultaneous virtual users driving transaction across the user journey in a given performance test scenario, but can also mean the number of 
+transaction synchronised to happen at exactly the same point
+
+Key Performance Indicator(KPI) : The set of targets which set the expected performance targets within the production system. These may include page response time(eg 99% of pages loaded <=2 seconds),
+user concurrency batch processing times, data throughput volumes , transaction failure rates , and underlying infrastructure behaviour(eg. Maximum Average CPU used, Minimum Free memory Available,
+threshold for remaining physical storage/ disk usage)
+
+Load Testing : A Type of performance testing used to evaluate the behavior of a system or component when the load on the system(via users and transaction) progressively increases up to and
+including peak levels
+
+Non functional requirement(NFRs) : Requirements that do not relate to the functioning of the system, but to other aspects of the system such as reliability, usability and performance
+
+Performance Engineering : Activities designed to ensure a system will be designed and implemented to meet specific non functional requirement. Often takes place following completion of testing 
+activites that highlight weakness in the design and implementation
+
+Performance Test plan : Typically a written document that details the objectives, scope, approach, deliverables, schedule, risk, data and test environment needs for testing on a specific project
+
+Performance Testing: Testing designed to determine the performance level of a system
+
+Reliability : Related to stability , reliability is the degree to which a system provides the same result for the same action over time under load
+
+Scalability : The degree to which a system's performance and capacity can be increased typically by increasing available hardware resource within a set of servers(vertical scaling)
+or increasing the number of servers available to service request(horizontal scaling )
+
+Soak Testing : A type of Performance testing used to evaluate the behaviour of a system or component when the system is subjected to expected load over a sustained period of time 
+
+Spike Testing : A type of performance testing used to evaluate the behaviour of a system or component when subjected to large short term changes in demand. Normally this is to test how the system 
+responds to large increase in demand e.g., User login, Black Friday-like sales events etc. 
+
+Stability : The degree to which a system exhibits failures and error when under normal usage. For example erroneous error when registering new users under load
+
+Stress Testing : A type of performance testing used to evaluate the behaviour of a system or component when subjected to load beyond the anticipated workload or by reducing the resources the system 
+can use, such as CPU or memory
+
+Transaction Volume Model(TVM): A document detailing the user journey to be simulated, the click-path steps that makes up the user journeys and associated load/transaction volume model to be tested. 
+This should include information regarding the geographical locate from where user will be expected to interact with the system and the method of interaction eg. mobile vs desktop
+
+User journey - The path through the system under text that group of Virtual User will use to simulate real user . It should be noted that key performance/volume impacting journeys should be used
+as it is impractical to performance test all possible user journey , a good rule-of-thumb is to use the 20% of user journeys that generate 80% of the volume 
+
+Virtual User : A simulated user that performs action as a real user would during the execution of a test 
+
+
+
+

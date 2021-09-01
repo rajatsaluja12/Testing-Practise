@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+
+
 public class CompareArrayList_Important {
 
 	public static void main(String[] args) {
@@ -23,43 +25,60 @@ public class CompareArrayList_Important {
 		System.out.println(arr1);
 
 		System.out.println(arr2);
-		
+
 		System.out.println(arr1.equals(arr2));
 
 		//2 Compare 2 list and find out the additional element present in arr3 which is not present in arr4
-		
+
 		ArrayList<Integer> arr3 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,1,2,3,4,5));
 
 		ArrayList<Integer> arr4 = new ArrayList<Integer>(Arrays.asList(1,22,4,5,6,7,33,50));
-		
+
 		arr3.removeAll(arr4);
-		
+
 		System.out.println(arr3);
-		
+
 		// Compare 2 list and find out the missing element in arr5 when compared with arr6
-		
+
 		ArrayList<Integer> arr5 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,1,2,3,4,5));
 
 		ArrayList<Integer> arr6 = new ArrayList<Integer>(Arrays.asList(1,22,4,5,6,7,33,50));
-		
+
 		arr6.removeAll(arr5);
 		System.out.println(arr6);
-		
-		
+
+
 		// Find out the common elements - Intersection of 2 arraylist
-		
+
 		ArrayList<Integer> arr7 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,1,2,3,4,5));
 
 		ArrayList<Integer> arr8 = new ArrayList<Integer>(Arrays.asList(1,22,4,5,6,7,33,50));
-		
+
 		arr7.retainAll(arr8);
 		System.out.println(arr7);
-		
-		
 
-		
-		
-		
+		// Retest
+		System.out.println("RETEST");
+
+
+		ArrayList<Integer> ap1 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
+		ArrayList<Integer> ap2 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+
+		ap1.retainAll(ap2);
+		System.out.println(ap1);
+
+		System.out.println("Find out the adddtional element present in ap2");
+
+		ap2.removeAll(ap1);
+		System.out.println(ap2);
+
+		System.out.println("Find out the missing element present in ap1");
+
+		ap1.removeAll(ap2);
+		System.out.println(ap2);
+
+
+
 
 	}
 

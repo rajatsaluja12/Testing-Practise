@@ -1,9 +1,7 @@
 package HashMapConcepts;
 
-import java.security.KeyStore.Entry;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 
 public class BasicsHashMap {
 
@@ -58,7 +56,8 @@ public class BasicsHashMap {
 
 		System.out.println("USING LAMBDA");
 
-		map.forEach((k,v) -> System.out.println( k + v));
+		//map.forEach((k,v) -> System.out.println( k + v));
+		map.forEach((k,v) -> System.out.println(k +v));
 
 	}
 

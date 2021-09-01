@@ -1,6 +1,7 @@
 package ArrayListConcept;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayListIteration {
@@ -35,6 +36,13 @@ public class ArrayListIteration {
 		while (s2.hasNext()) {
 			System.out.println(s2.next());
 		}
+
+		ArrayList<String> testing = new ArrayList<String>(Arrays.asList("T1","T2","T3"));
+
+		System.out.println(testing);
+		System.out.println(testing.size());
+
+		testing.stream().forEach(ele->System.out.println(ele));
 
 	}
 

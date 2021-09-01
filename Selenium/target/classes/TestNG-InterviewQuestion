@@ -1,0 +1,430 @@
+1. Explain what does @Test(invocationCount=?) and (threadPoolSize=?) indicate? 
+
+@Test (threadPoolSize=?): The threadPoolSize attributes tell TestNG to form a thread pool to run the test method through multiple threads. 
+With threadpool, the running time of the test method reduces greatly. // jitni jyada thread count/pool hoga , utna hi fast execution ho sakta hai. 
+@Test(invocationCount=?): The invocationcount tells how many times TestNG should run this test method.
+-------------------------------------------------------------------------------------------------------------------------
+
+2. What are Default Group, Partial Groups, and MetaGroups in TestNG? 
+Default Group: When an entire class is added to a group, it is called default group. It is a good way of defining a default group for all unit tests within a class.
+Partial Groups: When you define groups at the class level and then add groups at the method level, it is called partial groups.
+MetaGroups: When groups include other groups, these groups are called metagroups.
+-------------------------------------------------------------------------------------------------------------------------
+
+3. What are the different types of Listeners in TestNG? ↑
+ITestListener
+IAnnotationTransformer
+IAnnotationTransformer2
+IConfigurationListener
+IExecutionListener
+IInvokedMethodListener
+IInvokedMethodListener2
+IMethodInterceptor
+IReporter
+ISuiteListener
+-------------------------------------------------------------------------------------------------------------------------
+
+4. How can you prepare a customised HTML report in TestNG using Hybrid framework? 
+Junit with the help of an Ant.
+TestNG using inbuild default file.
+Use XSL file.
+-------------------------------------------------------------------------------------------------------------------------
+
+5. What is the difference between soft assertion and hard assertion? 
+Soft Assertion: In case of Soft Assertion, if TestNG gets an error during @Test, 
+it will throw an exception when an assertion fails and continues with the next statement after the assert statement.
+Hard Assertion: In the case of Hard Assertion, if TestNG gets an error during @Test, 
+it will throw an AssertException immediately when an assertion fails and stops execution after the assert statement.
+-------------------------------------------------------------------------------------------------------------------------
+
+6. What is the return type of @DataProvider annotation provided by TestNG? 
+@DataProvider annotation return an object double array (Object [ ][ ]) as data to the test method.
+-------------------------------------------------------------------------------------------------------------------------
+
+7. What is Inclusion & Exclusion Groups in TestNG? 
+A group which is included in test execution is called inclusion group. A group which is excluded from test execution is called exclusion group.
+-------------------------------------------------------------------------------------------------------------------------
+
+8. What is the test suite in TestNG? 
+A test suite is a group of tests that check the behaviour or a group of behaviours projected by a software program. 
+In TestNG, you cannot use a testing source code to define a suite. However, you can use a .xml file. 
+The main advantage of the test suite is that it enables you to flexibly configure a test that must be run. A test suite, defined by the tag, can contain more than one test.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+9. Why do we use Assertion in Selenium? 
+An assertion in selenium is used to verify the result or TestNG reports. It is mainly used to compare the actual result of an application with the expected result.
+-------------------------------------------------------------------------------------------------------------------------
+
+10. What are the standard assertions available in TestNG? 
+Assertions not only let us add validation into the tests but also help decide their state (Passed/Failed).
+
+
+assertEquals – Passes if the arguments match else fails.
+assertNotEquals – If the actual and expected values match, then the assertion fails.
+assertTrue – Passes if the input condition is true else throws AssertionError.
+assertFalse – Passes if the input condition is false else throws AssertionError.
+assertNull – Performs the null test on an object. In case of a null, the test aborts with an exception.
+assertNotNull – It does the opposite of the “asserNull.” The test method breaks with an exception upon discovering a non-null object.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+11. Why do we use TestNG in Selenium? 
+By using TestNG in Selenium you can generate test results in a proper format, that is not possible in the standard version of Selenium. 
+You will also get a report stating the number of tests that were successful, the number of tests that failed and the number of tests that could not be executed. 
+You can run the same test more than once without using loops. Groping of tests and conversion into .xml files also become easy.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+12. How to skip a @Test method from execution in TestNG? 
+By using throw new SkipException ().Once SkipException () thrown, remaining part of that test method will not be executed and control will goes directly to next test method execution.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+13. How to group tests at class-level in TestNG? 
+If most of our tests fall under the same group, then no need to repeat the “groups” attribute for each test method. 
+We can annotate the class with @Test and use the “groups” attribute. It’ll then apply to all the public methods of the class.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+14. How to get testng-failed.xml? 
+If your testcases are failing then once all testsuite completed then you have to refresh your project. 
+Check test-output folder at last you will get testng-failed.xml. Now simply run testng-failed.xml.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+15. How do you handle Dependency injection? 
+In software engineering, dependency injection is a technique whereby one object supplies the dependencies of another object. 
+TestNG supports two different kinds of dependency injection: native (performed by TestNG itself) and external (performed by a dependency injection framework such as Guice).
+
+-------------------------------------------------------------------------------------------------------------------------
+
+16. How to Call DataProvider from another Class? 
+In the test method, we will add one more attribute "dataProviderClass" in @Test annotation.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+17. What is invocationCount in TestNG? 
+invocationCount in TestNG is an attribute that is used to execute a method or test in the number of times. It acts as a loop.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+18. Which annotation is used to pass parameter values to test method from the testng.xml file? ↑
+Parameter annotation.
+-------------------------------------------------------------------------------------------------------------------------
+
+19. What is parameterization in TestNG? How to pass parameters using testng.xml? 
+Parameterization is the technique of defining values in testng.xml file and sending them as parameters to the test class. 
+This technique is especially useful when we need to pass multiple login credentials of various test environments.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+20. Describe the similarities and difference between JUnit and TestNG unit testing frameworks? 
+Similarities:
+
+Timeout Test is possible very easily in both the frameworks using @Test(timeOut=).
+We can ignore specific test case execution of software web application from suite in both the frameworks (In Junit @Ignore followed by @Test, In TestNG @Test(enable=false)).
+It is possible to create expected exception test for software web application in both the frameworks using @Test(expected =.class).
+Annotations - Few annotations are similar in both frameworks suite like @Test, @BeforeClass, @AfterClass. JUnit's @Before and @After are similar to TestNG's @BeforeMethod and @AfterMethod annotations.
+Difference:
+
+In TestNG, Parameterized test configuration is very easy while it is very hard to configure Parameterized test in JUnit.
+TestNG support group test using @Test(groups={"", "",...}) but it is not supported in JUnit.
+TestNG has a feature to configure dependency test using @Test(dependsOnMethods = { "<@Test Method>" }). Dependency test configuration for software web application is not possible in JUnit.
+TestNG support @BeforeTest, @AfterTest, @BeforeSuite, @AfterSuite, @BeforeGroups and @AfterGroups which are not supported in JUnit.
+Test prioritization, parallel testing is possible in TestNG using DataProvider method and textng.xml file. It is not supported by JUnit.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+21. What is Soft Assert in TestNG? 
+Soft Assert collects errors during @Test. Soft Assert does not throw an exception when an assert fails and would continue with the next step after the assert statement. 
+If there is any exception and you want to throw it then you need to use assertAll() method as a last statement in the @Test and test suite again continue with next @Test as it is.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+22. What are the ways to state dependencies in TestNG? 
+TestNG allows two ways to declare the dependencies.
+
+Using attributes dependsOnMethods in @Test annotations .
+Using attributes dependsOnGroups in @Test annotations.
+-------------------------------------------------------------------------------------------------------------------------
+
+23. How to run a group of test cases using TestNG? 
+TestNG allows you to perform sophisticated groupings of test methods. 
+Not only can you declare that methods belong to groups, but you can also specify groups that contain other groups. 
+Then TestNG can be invoked and asked to include a certain set of groups (or regular expressions) while excluding another set. 
+This gives you maximum flexibility in how you partition your tests and doesn’t require you to recompile anything if you want to run two different sets of tests back to back. 
+Groups are specified in your testng.xml file and can be found either under the or tag. Groups specified in the tag apply to all the tags underneath.
+-------------------------------------------------------------------------------------------------------------------------
+
+24. What is exception test in TestNG? 
+TestNG gives an option for tracing the Exception handling of code. You can verify whether a code throws the expected exception or not. 
+The expected exception to validate while running the test case is mentioned using the expectedExceptions attribute value along with @Test annotation.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+25. Can you describe major features of TestNG? 
+TestNG has many major features like:
+
+Support of @DataProvider annotation to perform data driven testing on software web application
+We can configure dependent test methods in TestNG, means TestTwo () is dependent to TestOne (). 
+We can also configure that if earlier test method (TestOne ()) fails during execution then dependent software test method ( TestTwo ()) has to be executed or not.
+Support of configuring test groups like backendtest-group, frontendtest-group etc. and we can tell TestNG to execute only specific group/groups.
+TestNG is supported by many tools and plug-ins like Eclipse, Maven, IDEA, etc.
+Generate HTML and XSLT test execution report for software web application etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+26. What is the Parallel Execution of Classes in TestNG? 
+TestNG provides an ability to run test classes in parallel. 
+By using parallel execution of classes, each class will be started and executed simultaneously in different threads. 
+Let us look at basic example for Parallel Execution of Classes using testng.xml. We will create a two classes with two test methods each and try to execute in different threads. 
+Create class and name it as: TestParallelClassOne.java.
+-------------------------------------------------------------------------------------------------------------------------
+
+27. What is the use of @Listener annotation in TestNG? 
+TestNG provides us different kinds of listeners using which we can perform some action in case an event has triggered. 
+Usually, testNG listeners are used for configuring reports and logging. 
+One of the most widely used listeners in testNG is ITestListener interface. It has methods like onTestSuccess, onTestFailure, onTestSkipped etc.
+We need to implement this interface creating a listener class of our own. 
+After that using the @Listener annotation we can use specify that for a particular test class our customized listener class should be used.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+28. What is the use of @Factory annotation? 
+The @Factory annotation is useful when we want to run multiple test cases through a single test class. It is mainly used for the dynamic execution of test cases.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+29. What are the advantages of TestNG DataProvider feature? ↑
+The advantages of data provider in TestNG are as follows: 
+1. TestNG Data provider helps to pass parameter values directly to the test method. 
+2. It allows users to write data-driven test where we can run multiple times the same test method with different sets of test data.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+30. Which attribute is used to run test method always? ↑
+The attribute "alwaysRun" supported by @Test annotation is used to run test methods always. 
+It takes value as true or false. If we set true, this method will always execute even its depending method fails.
+-------------------------------------------------------------------------------------------------------------------------
+
+
+31. Which attribute is used to provide data to test method in Data-driven testing? ↑
+The dataProvider attribute is used to provide data to the test method directly in data-driven testing.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+32. What is the default priority of test cases in TestNG? ↑
+The default priority of a test when not specified is integer value 0. 
+So, if we have one test case with priority 1 and one without any priority then the test without any priority value will get executed first (as default value will be 0 and tests with lower priority are executed first).
+
+-------------------------------------------------------------------------------------------------------------------------
+
+33. Define grouping in TestNG? ↑
+The group is an attribute in TestNG that allows you to execute the multiple test cases. 
+For example, if we have 100 test cases of itDepartment and 10 test cases of hrDepartment, and if you want to run all the test cases of itDepartment together in a single suite, this can be possible only through the grouping.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+34. What is the sequence of execution of the annotations in TestNG? ↑
+The Sequence of execution of the annotations is as follows:
+
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterClass
+@Aftertest
+@AfterSuite
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+35. What is DataProvider annotation in TestNG and why you use it? ↑
+The TestNG framework introduced the data provider annotation to support data-driven testing. 
+It allows us to use both internal and external sources of input. If the input size is small, then we can keep the data inside the project files. 
+However, in most cases, the need is to have a big dataset to feed into the test cases. And no tester or a developer would like to bloat his/her code with such a massive set of input. 
+Hence, the solution is to use the TestNG “@DataProvider” annotation. It can allow a test to accept input from external data sources like CSV, MS Excel, and many others.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+36. What is thread-count in TestNG? ↑
+The thread-count in TestNG is an attribute that is used to run the maximum number of threads for each suite if the parallel mode is enabled (otherwise ignore it). 
+For example, thread-count = "2": It will run your tests with two threads.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+37. What is threadPoolSize? How can we use it? ↑
+The threadPoolSize attribute specifies the number of threads to be assigned to the test method. 
+This is used in conjunction with invocationCount attribute.
+The number of threads will get divided with the number of iterations of the test method specified in the invocationCount attribute.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+38. What is Time-Out test in TestNG? ↑
+The Time-Out test in TestNG is nothing but the time allotted to perform unit testing. 
+If the unit test fails to finish in that specific time limit, TestNG will abandon further software testing and mark it as a failure.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+39. How to set priorities in TestNG? ↑
+There are always more than one tests or methods in the class. 
+If we do not prioritize these tests or methods, then the methods are selected alphabetically and executed while execution.
+If we want to run the tests in the sequence we want, then we need to set the priority along with the @Test annotation.
+
+This can be done as follows: @Test (priority=1), @Test (priority=2)
+
+-------------------------------------------------------------------------------------------------------------------------
+
+40. How is TestNG better than JUnit? ↑
+There are several features in TestNG that are not present in JUnit. The advantages of TestNG over JUnit are:
+
+Annotations in TestNG are easier than JUnit
+Constraints like @BeforeClass and @AfterClass are not present in TestNG unlike JUnit
+There is no method name constraint in TestNG like there is in JUnit
+Grouping of test cases is possible in TestNG
+There are 3 setUp/teardown levels in TestNG: @Before/AfterSuite, @Before/AfterTest and @Before/AfterGroup
+You can define dependent test cases where every test case is independent of others in TestNG
+You can execute test cases in groups in TestNG
+You can run multiple Selenium test cases in TestNG
+
+-------------------------------------------------------------------------------------------------------------------------
+
+41. What are the basic steps required in writing TestNG test? ↑
+There are three basic steps required in writing TestNG test that is as follows: 
+1. Write down the business logic of the test and annotate it by TestNG annotations. 
+2. Create testing.xml file and add the information about your test 3. Run TestNG.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+42. What is the difference between @BeforeClass and @BeforeMethod? ↑
+There are two main differences between @BeforeClass and @BeforeMethod. They are as follows:
+
+
+
+The method with @BeforeClass will be executed only once before any of the tests in the current class are run whereas, a method annotated with @BeforeMethod will be executed before each method annotated with @Test.
+@BeforeClass annotation can be used to set up the configuration and initialization which is common to all test methods in the current class. For example, we can set up driver configuration which will be common for all tests in the class.
+@BeforeMethod can be used to set that data which is repeating before each @Test annotated method.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+43. Mention different ways in which you can produce reports for TestNG results? ↑
+There are two ways to produce a report with Test NG, they are:
+
+For a listener class to implement, the class has to implement the org.testng./TestListener interface. These classes are informed at runtime by TestNG when the test begins, finsishes, skips, passes or fails.
+For a reporting class to implement, the class has to implement an org.testng/Reporter interface. When the whole suite run ends, these classes are called. When called, the object consisting the information of the whole test run is delivered to this class.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+44. What is the return type of @Factory annotation? ↑
+This annotation returns an array of class objects (Object [ ]).
+
+-------------------------------------------------------------------------------------------------------------------------
+
+45. What Is Factory Annotation used for? ↑
+This annotation solves a common problem of executing tests with different datasets without explicitly creating them. 
+Another advantage it brings is to allow the parameters to pass to test classes while instantiating them.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+46. What is timeOut in TestNG? ↑
+timeOut in TestNG is an attribute that is used for a time out test. It specifies a time period (in milliseconds) to wait for a test for complete execution.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+47. How to generate HTML report using TestNG? ↑
+To generate an HTML report in TestNG, you can use the ReportNG plug-in that generates a simple to read and colour-coded test results.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+48. How to Ignore a test case in TestNG? ↑
+To ignore the test case we use the parameter enabled = false to the @Test annotation.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+49. How to execute multiple programs or classes? ↑
+Using XML file we can execute multiple Java programs or classes at a time.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+50. What is verbose in TestNG? ↑
+verbose is an attribute in TestNG which is mostly used when reporting a bug or when trying to diagnose the execution of test run.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+51. How to disable a test in TestNG? ↑
+We can also disable tests on an individual basis by using the "enabled" property available on both @Test and @Before/After annotations.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+52. How to enable or disable test cases using testng.xml file? ↑
+We can enable or disable test cases by using and tags in the testng.xml file.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+53. How will you execute tests from a TestNG group? ↑
+We can follow any of the two methods to run a specific group in TestNG.
+
+
+Run via TestNG XML file.
+Execute from Eclipse IDE.
+In the TestNG XML, there is a “groups” tag which has subtags namely “include”/”exclude.” we can add our groups to the “include” tag to notify TestNG to run all the tests inside it. 
+The framework will search the included groups in the test classes added to the “classes” tag. We can also ignore a group by adding it to the “exclude” element.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+54. How to run test script in TestNG? ↑
+We can run test script in TestNG by right clicking on the TestNG class, click on "Run As" option and then select "TestNG test".
+
+-------------------------------------------------------------------------------------------------------------------------
+
+55. How to run test cases in parallel using TestNG? ↑
+We can use “parallel” attribute in testng.xml to accomplish parallel test execution in TestNG
+
+The parallel attribute of suite tag can accept four values:
+
+tests — All the test cases inside tag of testng.xml file will run parallel.
+classes — All the test cases inside a java class will run parallel.
+methods — All the methods with @Test annotation will execute parallel.
+instances — Test cases in same instance will execute parallel but two methods of two different instances will run in different thread.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+56. How to fail a testNG test if it doesn’t get executed within a specified time? ↑
+We can use the timeOut attribute of @Test annotation. The value assigned to this timeOut attribute will act as an upperbound, 
+if test doesn’t get executed within this time frame then it will fail with timeOut exception.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+57. How will you execute methods or test cases in TestNG in different order/your order? ↑
+When we have multiple methods or test cases and want to execute in order, TestNG priority attribute is useful to execute multiple test cases in your order. 
+If you have not mentioned test priority, TestNG will assign all @Test a priority as zero(0) and execute them.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+58. What is the need to create a testng.xml file? ↑
+When we test a project using Selenium Webdriver, it has a lot of classes in it. We cannot choose these classes one by one and put them for automation. 
+Hence we need to create a suite so that all the classes run in a single test suite. We can achieve this by creating a testing.xml file.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+59. Explain what it means when you have to pass parameters using data-providers in TestNG? ↑
+When you have to pass complex parameter or parameters that are to be created from Java, in such instances parameters can be passed using Dataproviders. 
+The annotation for data provider is @DataProvider. This annotation has only single string attribute, if the name is not declared; the Data provider’s name automatically defaults to the method’s name. A data provider yields back an array of objects.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+60. Can I call a single data provider method for multiple functions and classes? ↑
+Yes, the same DataProvider can be used in multiple functions and classes by declaring DataProvider in separate class and then reusing it in multiple classes.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+61. Explain how can you run the JUnit tests using TestNG? ↑
+You can run the JUnit tests using TestNG by: - Placing JUnit library on the TestNG classpath, so it can locate and use JUnit classes - Change your test runner from JUnit to TestNG in Ant and then run TestNG in “mixed mode”. 
+This will bring your entire test in the same
+
+-------------------------------------------------------------------------------------------------------------------------

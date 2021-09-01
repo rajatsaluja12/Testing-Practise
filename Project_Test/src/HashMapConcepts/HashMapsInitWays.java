@@ -4,7 +4,6 @@ import java.util.AbstractMap;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -42,14 +41,14 @@ public class HashMapsInitWays {
 		//map3.put("Baby", 2); // java.lang.UnsupportedOperationException
 
 
-		// JDK 8 : 
+		// JDK 8 :
 
 		//Creating 2D Array of Strings using stream and collecting in form map
 
 		Map<String,String> map4 = Stream.of( new String [] [] {
 
 			{"Test112","Baby112"},
-			{"Test114","Baby114"}	
+			{"Test114","Baby114"}
 		}).collect(Collectors.toMap(ele->ele[0], ele->ele[1]));
 		System.out.println(map4.get("Test112"));
 
@@ -103,7 +102,7 @@ public class HashMapsInitWays {
 
 				new AbstractMap.SimpleEntry<>("100","K1"),
 				new AbstractMap.SimpleEntry<>("200","K2"),
-				new AbstractMap.SimpleEntry<>("300","K3")		
+				new AbstractMap.SimpleEntry<>("300","K3")
 
 				);
 
@@ -112,6 +111,8 @@ public class HashMapsInitWays {
 
 		// Using guava library  FROM GOOGLE
 		// Map<String,String> map9  = ImmutableMap.of("1","TEST");
+
+
 
 
 

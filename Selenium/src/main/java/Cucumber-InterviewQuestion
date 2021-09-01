@@ -1,0 +1,301 @@
+1. What language is used by Cucumber? ↑
+Gherkin is the language that is used by the Cucumber tool. It is a simple English representation of the application behavior. 
+Gherkin language uses several keywords to describe the behavior of applications such as Feature, Scenario, Scenario Outline, Given, When, Then, etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+2. What is meant by a feature file? ↑
+A feature file must provide a high-level description of an Application Under Test (AUT). 
+The first line of the feature file must start with the keyword ‘Feature’ followed by the description of the application under test.
+
+A feature file may include multiple scenarios within the same file. A feature file has the extension .feature.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+3. What are the various keywords that are used in Cucumber for writing a scenario? ↑
+Mentioned below are the keywords that are used for writing a scenario:
+
+Given
+When
+Then
+And
+
+-------------------------------------------------------------------------------------------------------------------------
+4. What is the purpose of a Scenario Outline in Cucumber? ↑
+Scenario outline is a way of parameterization of scenarios. 
+This is ideally used when the same scenario needs to be executed for multiple sets of data, however, the test steps remain the same. 
+Scenario Outline must be followed by the keyword ‘Examples’, which specify the set of values for each parameter.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+5. What programming language is used by Cucumber? ↑
+Cucumber tool provides support for multiple programming languages such as Java, .Net, Ruby etc. It can also be integrated with multiple tools such as Selenium, Capybara, etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+6. What is the purpose of the Step Definition file in Cucumber? ↑
+A step definition file in Cucumber is used to segregate the feature files from the underlying code. 
+Each step of the feature file can be mapped to a corresponding method on the Step Definition file.
+
+While feature files are written in an easily understandable language like, Gherkin, Step Definition files are written in programming languages such as Java, .Net, Ruby, etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+7. What is the purpose of the Behaviour Driven Development (BDD) methodology in the real world? ↑
+BDD is a methodology to understand the functionality of an application in the simple plain text representation.
+
+The main aim of the Behavior Driven Development framework is to make various project roles such as Business Analysts,
+Quality Assurance, Developers, Support Teams understand the application without diving deep into the technical aspects.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+8. What is the limit for the maximum number of scenarios that can be included in the feature file? ↑
+A feature file can contain a maximum of 10 scenarios, but the number can vary from project to project and from one organization to another. 
+But it is generally advisable to limit the number of scenarios included in the feature file.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+9. What is the use of Background keyword in Cucumber? ↑
+Background keyword is used to group multiple given statements into a single group. This is generally used when the same set of given statements are repeated in each scenario of the feature file.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+10. What symbol is used for parameterization in Cucumber? ↑
+Pipe symbol (|) is used to specify one or more parameter values in a feature file.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+11. What is the purpose of Examples keyword in Cucumber? ↑
+Examples keyword is used to specify values for each parameter used in the scenario. Scenario Outline keyword must always be followed by the keyword Examples.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+12. What is the file extension for a feature file? ↑
+File Extension for a feature file is .feature. A feature file is ideally written in a notepad file and is saved with the extension feature.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+13. What is the purpose of the Cucumber Options tag? ↑
+Cucumber Options tag is used to provide a link between the feature files and step definition files. Each step of the feature file is mapped to a corresponding method on the step definition file.
+
+Below is the syntax of Cucumber Options tag:
+
+@CucumberOptions(features="Features",glue={"StepDefinition"})
+
+-------------------------------------------------------------------------------------------------------------------------
+
+14. How can Cucumber be integrated with Selenium WebDriver? ↑
+Cucumber can be integrated with the Selenium Webdriver by downloading the necessary JAR files.
+
+Given below are the list of JAR files that are to be downloaded for using Cucumber with Selenium web driver:
+
+cucumber-core-1.2.2.jar
+cucumber-java-1.2.2.jar
+cucumber-junit-1.2.2.jar
+cucumber-jvm-deps-1.0.3.jar
+cucumber-reporting-0.1.0.jar
+gherkin-2.12.2.jar
+
+
+response = rest(log).
+header("Content-type","")
+.formparam("granttype","")
+.formparam("scope","")
+.formparam("client_assertiontype","")
+-------------------------------------------------------------------------------------------------------------------------
+
+15. When is Cucumber used in real-time? ↑
+Cucumber tool is generally used in real-time to write acceptance tests for an application. It is generally used by non-technical people such as Business Analysts, Functional Testers, etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+16. What is the name of the plugin that is used to integrate Eclipse with Cucumber? 
+Cucumber Natural Plugin is the plugin that is used to integrate Eclipse with Cucumber.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+17. What is the meaning of the TestRunner class in Cucumber? ↑
+TestRunner class is used to provide the link between the feature file and the step definition file. 
+The next question provides a sample representation of how the TestRunner class will look like. A TestRunner class is generally an empty class with no class definition.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+18. What is the starting point of execution for feature files? ↑
+When integrated with Selenium, the starting point of execution must be from the TestRunner class.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+19. Should any code be written within the TestRunner class? ↑
+No code should be written under the TestRunner class. It should include the tags @RunWith and @CucumberOptions.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+20. What is the use of features property under the Cucumber Options tag? ↑
+Features property is used to let the Cucumber framework identify the location of the feature files.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+21. What is the use of glue property under the Cucumber Options tag? ↑
+Glue property is used to let the Cucumber framework identify the location of step definition files.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+22. What are the two files required to execute a Cucumber test scenario? ↑
+Two files required to execute a Cucumber test scenario are:
+
+Features
+Step Definition
+
+-------------------------------------------------------------------------------------------------------------------------
+23. What are the differences between Jbehave and Cucumber? ↑
+Although Cucumber and Jbehave are meant for the same purpose, acceptance tests are completely different frameworks
+
+Jbehave is pure Java-based and Cucumber is Ruby-based.
+Jbehave are based on stories while Cucumber is based on features.
+
+-------------------------------------------------------------------------------------------------------------------------
+24. Explain test harness. ↑
+A test harness for Cucumber and rspec allows for separating responsibility between setting up the context and interacting with the browser and cleaning up the step definition files.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+25. When to use Rspec and when to use Cucumber? ↑
+Rspec is used for Unit Testing.
+Cucumber is used for Behavior-driven development. Cucumber can be used for System and Integration Tests.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+26. What software do you need to run a Cucumber Web Test cases? ↑
+Ruby and its Development Kit
+Cucumber
+IDE like ActiveState
+Watir ( To simulate browser)
+Ansicon and rspec (if required)
+
+-------------------------------------------------------------------------------------------------------------------------
+
+27. What is Selenium? ↑
+Selenium is an automation tool which is a widely used tool for Functional Testing of the web-based application. Selenium supports different language like ruby, java, python C#, etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+28. Why use Cucumber with Selenium? ↑
+Cucumber and Selenium are two popular technologies. Many organizations use Selenium for functional testing. 
+These organizations which are using Selenium want to integrate Cucumber with Selenium as Cucumber helps you to read and to understand the application flow.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+29. What is a test framework? ↑
+In general, a framework is an entity which binds several modules in a logical sequence to cover the end-to-end flows of an application. 
+The objective of investing in a framework is to test a product which has a recurring roadmap and regular release cycle.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+30. List down the mobile device which Selenium supports. ↑
+1) It supports Safari browser via a third-party driver. It is experimental and comes with limited functionality.
+
+2) It provides an Android driver to run tests on its native mobile browser.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+31. What are before, after, beforeStep and afterStep hooks? ↑
+1) Before: executes before the feature file execution.
+
+2) After: executes after the feature file execution.
+
+3) BeforeStep: executes before each step execution.
+
+4) AfterStep: executes after each step execution.
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+32. What is the purpose of cucumber dry-run? ↑
+We use to compile the cucumber feature files and step definitions. If there occur any compilation errors, then it shows them on the console.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+33. What do you think when is cucumber used in real-time? ↑
+Cucumber tool is normally used in real-time to mark receipt tests for an application. It is normally used by non-technical people such as Functional testers, Business analysts etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+34. Define regular expressions. ↑
+A regular expression is a pattern recounting a definite amount of text. The essential regular expression consists of a single literal character.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+35. State any three popular BDD testing tools. ↑
+The three popular BDD testing tools are:
+
+Specflow
+JBehave
+Cucumber
+
+36. Name the two main purpose of using Gherkin. ↑
+Automated tests
+Documentation
+
+-------------------------------------------------------------------------------------------------------------------------
+
+37. What Is Profile In Cucumber? ↑
+We can create Cucumber profiles to run specific features and step definitions.
+
+We can use following command to execute a cucumber profile cucumber features -p
+
+Ex: cucumber features -p regression
+
+-------------------------------------------------------------------------------------------------------------------------
+
+38. What are cucumber tags? And why do we use them? ↑
+Cucumber tags help in filtering the scenarios. We can tag the scenarios and then run them based on tags.
+
+We can add tags to scenarios with the <@> symbol.
+We can use the following command to run a cucumber tagged scenario.
+cucumber features -t @<tag_name>
+
+Example: cucumber features -t @test
+
+-------------------------------------------------------------------------------------------------------------------------
+
+39. Full form of TDD. ↑
+TDD stands for Test Driven Development.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+40. What is the difference between cucumber, JBehave, and Specflow? ↑
+Cucumber is a Ruby based framework.
+JBehave is a JAVA based framework.
+Specflow is a .NET based framework.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+41. What is the difference between Given, When, Then steps in feature file? ↑
+Given defines the context of the scenario.
+When defines the actions of the scenario.
+Then defines the outcome of the scenario.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+42. Cucumber Tags are case sensitive. True or False? ↑
+TRUE
+
+-------------------------------------------------------------------------------------------------------------------------
+
+43. Name any two build management tools that can be integrated with Cucumber? ↑
+Gradle
+Maven
+
+-------------------------------------------------------------------------------------------------------------------------
+
+44. Name any two testing framework that can be integrated with Cucumber? ↑
+JUnit
+TestNG
+
+-------------------------------------------------------------------------------------------------------------------------
+45. Name any advanced framework design that can be used with Cucumber? ↑
+Page Object Model
+Log4j
+Extent Reporting
+Dependency Injection (Example: Pico Container)
+Object Repository
